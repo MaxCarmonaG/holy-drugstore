@@ -1,0 +1,132 @@
+<div class="modal-dialog" role="document">
+  <div>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Agregar a Cesta de Compra</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form id="formEnviaItem" method="post">
+        <input type="hidden" value="0" data-val="true" data-val-required="The Id field is required." id="Id" name="Id" />
+        <input type="hidden" value="4775" data-val="true" data-val-required="The ArticuloId field is required." id="ArticuloId" name="ArticuloId" />
+        <input type="hidden" value="578" data-val="true" data-val-required="The ClienteId field is required." id="ClienteId" name="ClienteId" />
+        <input type="hidden" value="797" data-val="true" data-val-required="The UsuarioId field is required." id="UsuarioId" name="UsuarioId" />
+        <input type="hidden" value="2" data-val="true" data-val-required="The VendedorId field is required." id="VendedorId" name="VendedorId" />
+        <input type="hidden" value="174,9" data-val="true" data-val-number="The field Precio must be a number." data-val-range="&#xA1;Error en cifra!" data-val-range-max="1.7976931348623157E&#x2B;308" data-val-range-min="0" data-val-required="The Precio field is required." id="Precio" name="Precio" />
+        <p id="buttonLabel" hidden>0</p>
+
+        <div class="modal-body">
+          <div class="card">
+            <div class="row">
+              <div class="col-sm-3">
+                <img src="/img/loginphoto.jpg" class="img-fluid" style="padding-top: 25px; padding-left: 10px" />
+              </div>
+              <div class="col-sm-9">
+                <div class="card-body">
+                  <p>
+                    Adh Briut De Tela 5,08 Cm X 9,14 M X 1<br />
+                    <small>Inversiones M. R. C. S. 21, C. A</small><br />
+                    <b>P.V.P.: </b> 174,90<br />
+                    <b>Disponible:</b> 120<br />
+                    <b><small>16,00% I.V.A. </small></b>
+                    <br />
+                    <b><small>Vecimiento 1/11/2028</small></b>
+                    <br />
+                    <span class="badge bg-danger text-light">
+                      <big>Oferta: 169,65</big>
+                      <br />
+                      <br />
+                      3,0% - M&#xED;nimo: 1. De 1/4/2024 a 5/7/2024
+                    </span>
+                    <br />
+                    <small>* Precios y existencias sujeto a disponibilidad</small>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br />
+          <div class="row" style="padding-bottom: 5px">
+            <div class="col-sm-4">
+              <p><b>Localidad</b></p>
+            </div>
+            <div class="col-sm-4">
+              <p><b>Cantidad</b></p>
+            </div>
+          </div>
+
+          <div class="row" style="padding-bottom: 5px">
+            <div class="col-sm-4">
+              <p><b>CARICUAO</b></p>
+            </div>
+            <div class="col-sm-4">
+              <input name="seleccionId" type="hidden" value="567" />
+              <input id="seleccionValue" name="seleccionValue" type="number" class="form-control" style="text-align: right" min="0" value="0" autofocus />
+            </div>
+            <div class="col-sm-4">
+              <button type="button" class="btn btn-outline-secondary btn-sm" onclick="ReplicaCantidades()">Igualar cantidad</button>
+            </div>
+          </div>
+          <div class="row" style="padding-bottom: 5px">
+            <div class="col-sm-4">
+              <p><b>CATIA 3</b></p>
+            </div>
+            <div class="col-sm-4">
+              <input name="seleccionId" type="hidden" value="568" />
+              <input name="seleccionValue" type="number" class="form-control" style="text-align: right" min="0" value="0" />
+            </div>
+          </div>
+          <div class="row" style="padding-bottom: 5px">
+            <div class="col-sm-4">
+              <p><b>LA VEGA</b></p>
+            </div>
+            <div class="col-sm-4">
+              <input name="seleccionId" type="hidden" value="569" />
+              <input name="seleccionValue" type="number" class="form-control" style="text-align: right" min="0" value="0" />
+            </div>
+          </div>
+          <div class="row" style="padding-bottom: 5px">
+            <div class="col-sm-4">
+              <p><b>GUARENAS</b></p>
+            </div>
+            <div class="col-sm-4">
+              <input name="seleccionId" type="hidden" value="570" />
+              <input name="seleccionValue" type="number" class="form-control" style="text-align: right" min="0" value="0" />
+            </div>
+          </div>
+          <div class="row" style="padding-bottom: 5px">
+            <div class="col-sm-4">
+              <p><b>EL VALLE</b></p>
+            </div>
+            <div class="col-sm-4">
+              <input name="seleccionId" type="hidden" value="571" />
+              <input name="seleccionValue" type="number" class="form-control" style="text-align: right" min="0" value="0" />
+            </div>
+          </div>
+          <div class="row" style="padding-bottom: 5px">
+            <div class="col-sm-4">
+              <p><b>EL PARAISO</b></p>
+            </div>
+            <div class="col-sm-4">
+              <input name="seleccionId" type="hidden" value="572" />
+              <input name="seleccionValue" type="number" class="form-control" style="text-align: right" min="0" value="0" />
+            </div>
+          </div>
+          <div class="row" style="padding-bottom: 5px">
+            <div class="col-sm-4">
+              <p><b>CATIA 1</b></p>
+            </div>
+            <div class="col-sm-4">
+              <input name="seleccionId" type="hidden" value="573" />
+              <input name="seleccionValue" type="number" class="form-control" style="text-align: right" min="0" value="0" />
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer" align="center">
+          <button id="addItemButton" type="submit" class="btn btn-primary">Agregar</button>
+          <button id="cancelButton" type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancelar</button>
+        </div>
+        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8LJ1wT-wGzNCp57-0KN8nJvV9HCZwdziBwM884yDzAQQJeNW11P9F4tZeVhBLJ6RAa-UMaJmGghvwqZFf0urFKBbu0AbtLuJNUNOQDQJ_xmXWYTn4AUrJYRm5v_Fxg89ZecL3dv6qzplc2bwdnFiy7xU1DklkfR0RS6W0EItCne27eNBga1J6DHDsNcydnRNRQ" />
+      </form>
+    </div>
+  </div>
+</div>

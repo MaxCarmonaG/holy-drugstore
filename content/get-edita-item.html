@@ -1,0 +1,57 @@
+<div class="modal-dialog" role="document">
+  <div>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Modificar pedido</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form id="formEnviaItem" action="EditaItem" method="post">
+        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8LJ1wT-wGzNCp57-0KN8nJt2NElcsQeM7HOjZHIO_KKkTlNqZae21sNW4S_0_N7Tga_mHxLyUIQK08kxIBLmGtDIpX-wEoPo4olTOoGAHjEkvEIYQKVkIaEI5CNqvZakLcamD3ILFX9Imajvul4sTAXf6FYwngijrt1ZAVRe9fLx_UNk4KhcE7LpsNgrPV9Osg" />
+
+        <input type="hidden" value="1653537" data-val="true" data-val-required="The Id field is required." id="Id" name="Id" />
+
+        <div class="modal-body">
+          <div class="card">
+            <div class="row">
+              <div class="col-sm-3">
+                <img src="/img/loginphoto.jpg" class="img-fluid" style="padding-top: 25px; padding-left: 10px" />
+              </div>
+              <div class="col-sm-9">
+                <div class="card-body">
+                  <p>
+                    Adh Briut Plas Trans 2,54cm X 4,57m X 1<br />
+                    <small>Inversiones M. R. C. S. 21, C. A</small><br />
+                    <b>P.V.P.:</b> 34,75<br />
+                    <b>Disponible:</b> 459
+                    <br />
+                    <small>* Precios y existencias sujeto a disponibilidad</small>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br />
+          <div class="row" style="padding-bottom: 5px">
+            <div class="col-sm-3">
+              <p><b>Localidad</b></p>
+            </div>
+            <div class="col-sm-9"><p>CATIA 3</p></div>
+          </div>
+          <div class="row" style="padding-bottom: 5px">
+            <div class="col-sm-3">
+              <p><b>Cantidad</b></p>
+            </div>
+            <div class="col-sm-4">
+              <input type="number" class="form-control" autofocus style="text-align: right" min="1" required value="3" data-val="true" data-val-range="&#xA1;Error en cifra!" data-val-range-max="2147483647" data-val-range-min="0" data-val-required="The Cantidad field is required." id="Cantidad" name="Cantidad" /><input name="__Invariant" type="hidden" value="Cantidad" />
+              <span class="text-danger field-validation-valid" data-valmsg-for="Cantidad" data-valmsg-replace="true"></span>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer text-center">
+          <button id="editItemButton" type="submit" class="btn btn-primary">Agregar</button>
+          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancelar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

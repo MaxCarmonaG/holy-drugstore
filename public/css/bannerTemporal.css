@@ -1,0 +1,7 @@
+#banner-temporal {
+  background-image: url('/img/home_banner2.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #ff3346 !important;
+}
