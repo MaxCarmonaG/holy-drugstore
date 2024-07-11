@@ -47,4 +47,8 @@ app.get('/listarPrecios', (req, res) => {
   res.sendFile(path.join(__dirname, '/content/get-listar-precios.html'));
 });
 
-app.listen(8080);
+const PORT = process.env.PORT || 8080;
+
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
