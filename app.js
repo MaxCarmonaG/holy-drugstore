@@ -12,39 +12,39 @@ app.use(cors());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/pedido/busquedaitems', (req, res) => {
-  res.sendFile(path.resolve('/content/get-busqueda-items.html'));
+  res.sendFile(path.join(__dirname, '/api/content/get-busqueda-items.html'));
 });
 
 app.post('/pedido/agregaitem', (req, res) => {
-  res.sendFile(path.resolve('/content/post-agrega-item.html'));
+  res.sendFile(path.join(__dirname, '/api/content/post-agrega-item.html'));
 });
 
 app.get('/pedido/agregaitem', (req, res) => {
-  res.sendFile(path.resolve('/content/get-agrega-item.html'));
+  res.sendFile(path.join(__dirname, '/api/content/get-agrega-item.html'));
 });
 
 app.get('/pedido/listarlaboratorios', (req, res) => {
-  res.sendFile(path.resolve('/content/get-listar-laboratorios.html'));
+  res.sendFile(path.join(__dirname, '/api/content/get-listar-laboratorios.html'));
 });
 
 app.get('/pedido/itemslaboratorio/', (req, res) => {
-  res.sendFile(path.resolve('/content/get-busqueda-items.html'));
+  res.sendFile(path.join(__dirname, '/api/content/get-busqueda-items.html'));
 });
 
 app.get('/pedido/editaitem/', (req, res) => {
-  res.sendFile(path.resolve('/content/get-edita-item.html'));
+  res.sendFile(path.join(__dirname, '/api/api/content/get-edita-item.html'));
 });
 
 app.get('/consultas/pedidos/', (req, res) => {
-  res.sendFile(path.resolve('/content/get-consultas-pedidos.html'));
+  res.sendFile(path.join(__dirname, '/api/api/content/get-consultas-pedidos.html'));
 });
 
 app.get('/consultas/facturas/', (req, res) => {
-  res.sendFile(path.resolve('/content/get-consultas-facturas.html'));
+  res.sendFile(path.join(__dirname, '/api/content/get-consultas-facturas.html'));
 });
 
 app.get('/listarPrecios', (req, res) => {
-  res.sendFile(path.resolve('/content/get-listar-precios.html'));
+  res.sendFile(path.join(__dirname, '/api/content/get-listar-precios.html'));
 });
 
 const PORT = process.env.PORT || 3000;
