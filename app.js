@@ -32,11 +32,11 @@ app.get('/pedido/itemslaboratorio/', (req, res) => {
 });
 
 app.get('/pedido/editaitem/', (req, res) => {
-  res.sendFile(path.join(__dirname, '/api/api/content/get-edita-item.html'));
+  res.sendFile(path.join(__dirname, '/api/content/get-edita-item.html'));
 });
 
 app.get('/consultas/pedidos/', (req, res) => {
-  res.sendFile(path.join(__dirname, '/api/api/content/get-consultas-pedidos.html'));
+  res.sendFile(path.join(__dirname, '/api/content/get-consultas-pedidos.html'));
 });
 
 app.get('/consultas/facturas/', (req, res) => {
