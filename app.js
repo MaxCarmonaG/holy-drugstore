@@ -43,9 +43,9 @@ app.get('/consultas/facturas/', (req, res) => {
   res.sendFile(path.join(process.cwd(), '/api/content/get-consultas-facturas.html'));
 });
 
-app.get('/listarPrecios', (req, res) => {
+/* app.get('/listarPrecios', (req, res) => {
   res.sendFile(path.join(process.cwd(), '/api/content/get-listar-precios.html'));
-});
+}); */
 
 const PORT = process.env.PORT || 3000;
 
