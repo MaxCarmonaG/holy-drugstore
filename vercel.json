@@ -1,7 +1,0 @@
-{
-  "functions": {
-    "api/listarPrecios.js": {
-      "includeFiles": "api/content/get-listar-precios.html"
-    }
-  }
-}
