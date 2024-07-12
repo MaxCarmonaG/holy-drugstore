@@ -3,7 +3,7 @@
   "rewrites": [{ "source": "/(.*)", "destination": "/api" }],
   "functions": {
     "app.js": {
-      "includeFiles": ["api/content/*.html"]
+      "includeFiles": "api/content/*.html"
     }
   }
 }
