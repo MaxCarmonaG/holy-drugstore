@@ -1,9 +1,7 @@
 {
-  "version": 2,
-  "rewrites": [{ "source": "/(.*)", "destination": "/api" }],
   "functions": {
     "api/listarPrecios.js": {
-      "includeFiles": "/api/content/*.html"
+      "includeFiles": "api/content/get-listar-precios.html"
     }
   }
 }
