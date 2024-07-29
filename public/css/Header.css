@@ -1,34 +1,13 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-:root {
-  --e-color-accent: #fe0000;
-  --e-color-primary: #0b1928;
-  --e-color-border: #e4e5e6;
-}
-
-/* for test */
-body {
-  background-color: #f0f4f5;
-}
-/* for test */
-
 /* ----- Header ----- */
 #header {
-  font-family: "Roboto", Sans-serif;
-  font-size: 17px;
-  margin-bottom: 20px;
+  font-size: 18px;
+  line-height: 24px;
+  margin-bottom: 4.5rem;
 }
 
-#header .top-header {
-  font-size: 15px;
-  background-color: var(--e-color-accent);
-  padding: 0 21.5px;
+#header .navbar {
+  padding: 0 20px;
+  border-bottom: 1px solid var(--color-gray-2);
 }
 
 #header .top-header .navbar-nav {
@@ -42,7 +21,7 @@ body {
 
 #header .top-header li a {
   display: flex;
-  color: #fff;
+  color: var(--color-brand-light);
 }
 
 #header .top-header li a:hover {
@@ -64,9 +43,9 @@ body {
 }
 
 #header .navbar-nav .nav-link {
-  font-weight: 500;
+  font-weight: 600;
   padding: 30px 20px;
-  color: var(--e-color-primary);
+  color: var(--color-brand-dark);
   transition:
     color 0.4s,
     background-color 0.4s;
@@ -77,11 +56,11 @@ body {
 }
 
 #header .navbar-nav .nav-link:hover {
-  color: var(--e-color-accent);
+  color: var(--color-brand-primary);
 }
 
 #header .navbar-nav .show > .nav-link {
-  color: var(--e-color-accent);
+  color: var(--color-brand-primary);
 }
 
 #header .navbar-nav .nav-link#navbarUser {
@@ -89,6 +68,7 @@ body {
 }
 
 #header .navbar-nav .nav-link#navbarUser::after,
+#header .navbar-nav button#navbarUser::after,
 #header .navbar-nav .nav-link#navbarConsultas::after {
   display: none !important;
 }
@@ -103,23 +83,26 @@ body {
   margin-top: 0.625rem;
   padding: 0;
   left: 20px;
-  font-size: 15px;
+  font-size: 16px;
   border: none;
-  border-radius: 0;
+  border-radius: 14px;
+  overflow: hidden;
   box-shadow: 0px 0px 30px 0px rgb(0 0 0 / 10%);
 }
 
 #header .dropdown-menu .dropdown-item {
   padding: 13px 18px;
-  border-bottom: 1px solid var(--e-color-border);
-  transition:
-    color 0.4s,
-    background-color 0.4s;
+  transition: all 0.3s ease-in-out;
+}
+
+#header .dropdown-menu .dropdown-item:not(:last-child) {
+  border-bottom: 1px solid var(--color-gray-3);
 }
 
 #header .dropdown-menu .dropdown-item:hover {
-  color: #fff;
-  background-color: var(--e-color-accent);
+  color: var(--color-brand-light);
+  background-color: var(--color-brand-primary);
+  font-weight: 600;
 }
 
 @media (max-width: 991.98px) {
@@ -155,7 +138,7 @@ body {
   }
 
   #header .navbar .navbar-toggler:hover {
-    color: var(--e-color-accent);
+    color: var(--color-brand-primary);
   }
 
   #header .navbar .navbar-toggler .fa-bars {
@@ -195,18 +178,18 @@ body {
   #header .navbar-nav .nav-link {
     font-size: 15px;
     padding: 24px 20px;
-    border-top: 1px solid var(--e-color-border);
+    border-top: 1px solid var(--color-gray-2);
   }
 
   #header .navbar-nav .nav-link:hover {
-    color: #fff;
-    background-color: var(--e-color-accent);
+    color: var(--color-brand-light);
+    background-color: var(--color-brand-primary);
   }
 
   #header .navbar-nav .show > .nav-link {
-    color: #fff;
-    background-color: var(--e-color-accent);
-    border-bottom: 1px solid var(--e-color-border);
+    color: var(--color-brand-light);
+    background-color: var(--color-brand-primary);
+    border-bottom: 1px solid var(--color-gray-2);
   }
 }
 
@@ -258,6 +241,13 @@ td.opciones a {
   margin: auto;
 }
 
+@media (min-width: 992px) {
+  #header .navbar-nav li:last-child {
+    display: flex;
+    align-items: center;
+  }
+}
+
 @media (max-width: 575.98px) {
   .filtros {
     flex-direction: column;
@@ -282,4 +272,20 @@ td.opciones a {
   .options-group > .btn {
     width: fit-content;
   }
+}
+
+.etiqueta-entorno {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 2px solid black;
+  border-top: 1px;
+  color: white;
+  font-weight: 500;
+  font-size: 1.1rem;
+  padding: 8px 16px;
+  border-radius: 0 0 16px 16px;
+  z-index: 1;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 100%);
 }

@@ -26,8 +26,9 @@ var BuscaItems = function () {
 
         errorDiv.html(data);
       } else {
+        updateTable().destroy();
         tabla.html(data);
-        ActualizaTabla();
+        updateTable().draw();
         $('[data-bs-toggle="tooltip"]').tooltip();
       }
     },
@@ -81,10 +82,11 @@ var ListaLaboratorios = function () {
         errorDiv.html(data);
       } else {
         var tabla = $('#listaLaboratorios');
-
         tabla.html('');
         tabla.html(data);
-        ActualizaTabla(true);
+        tabla.find('#tablaLaboratorios').each(function () {
+          updateTable($(this), { searching: true, layout: { top: 'search', topEnd: null } });
+        });
         $('#modalLaboratorio').modal('show');
       }
     },
@@ -164,8 +166,9 @@ var CargaLaboratorio = function (id) {
       } else {
         var tabla = $('#tablaBusqueda');
 
+        updateTable().destroy();
         tabla.html(data);
-        ActualizaTabla();
+        updateTable().draw();
         $('[data-toggle="tooltip"]').tooltip();
         $('#modalLaboratorio').modal('hide');
       }
@@ -256,9 +259,58 @@ $('#modalAgrega').on('shown.bs.modal', function () {
   $('#Cantidad').select();
 });
 
+const updateTable = function ($table = null, options = {}) {
+  const baseOptions = {
+    retrieve: true,
+    language: {
+      deferRender: true,
+      decimal: ',',
+      thousands: '.',
+      lengthMenu: 'Mostrando _MENU_ registros por página',
+      info: 'Mostrando página _PAGE_ de _PAGES_',
+      sProcessing: 'Procesando...',
+      sZeroRecords: 'No se encontraron resultados',
+      sEmptyTable: '¡Sin información a mostrar!',
+      sInfoEmpty: 'Sin registros',
+      sInfoFiltered: '(filtrado de un total de _MAX_ registros)',
+      sInfoPostFix: '',
+      sSearch: 'Buscar',
+      sUrl: '',
+      sLoadingRecords: 'Cargando...',
+      oPaginate: {
+        sFirst: 'Primero',
+        sLast: 'Último',
+        sNext: 'Siguiente',
+        sPrevious: 'Anterior',
+      },
+      oAria: {
+        sSortAscending: ': Activar para ordenar la columna de manera ascendente',
+        sSortDescending: ': Activar para ordenar la columna de manera descendente',
+      },
+    },
+    info: false,
+    paging: false,
+    scrollY: '50vh',
+    scrollCollapse: true,
+    ordering: false,
+    searching: false,
+    pageLength: 5,
+    responsive: true,
+    bLengthChange: false,
+  };
+
+  const targetTable = $table ?? $('#tablaProductos');
+  return targetTable.DataTable({ ...baseOptions, ...options });
+};
+
+$(document).ready(function () {
+  updateTable();
+});
+
 // Configuración visual de datatable de productos
-var ActualizaTabla = function (searching = false) {
-  let table = new DataTable('table.table-hover.table-striped', {
+var ActualizaTabla = function (searching = false, tableId = null) {
+  const targetTable = tableId ?? 'tablaProductos';
+  return $('#' + targetTable).DataTable({
     retrieve: true,
     language: {
       deferRender: true,
@@ -299,11 +351,9 @@ var ActualizaTabla = function (searching = false) {
   });
 };
 
-ActualizaTabla();
-
 // Configuración visual de datatable de busqueda en modal
 var ActualizaTablaLaboratorio = function () {
-  let table = new DataTable('#tablaLaboratorios', {
+  $('#tablaLaboratorios').DataTable({
     retrieve: true,
     language: {
       deferRender: true,

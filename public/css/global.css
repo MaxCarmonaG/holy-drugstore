@@ -1,0 +1,75 @@
+:root {
+  --color-brand-primary: #be0000;
+  --color-brand-primary-s10: #ab0000;
+  --color-brand-primary-s20: #980000;
+  --color-brand-secondary: #ff2828;
+  --color-brand-secondary-s10: #e62424;
+  --color-brand-secondary-s20: #cc2020;
+  --color-brand-dark: #0b1928;
+  --color-brand-light: #ffffff;
+  --color-gray-1: #b4b4b934;
+  --color-gray-2: #707070;
+  --color-gray-3: #d8d5d5;
+  --color-gray-4: #28282dba;
+  --color-gray-5: #28282d;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-brand-light);
+  font-family: 'Hurme Geometric', Sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+}
+
+#header {
+  font-size: 18px;
+  line-height: 24px;
+  margin-bottom: 70px;
+}
+
+.btn-brand-primary {
+  --bs-btn-font-weight: 600;
+  --bs-btn-color: var(--color-brand-light);
+  --bs-btn-bg: var(--color-brand-primary);
+  --bs-btn-border-color: var(--color-brand-primary);
+  --bs-btn-hover-color: var(--color-brand-light);
+  --bs-btn-hover-bg: var(--color-brand-primary-s10);
+  --bs-btn-hover-border-color: var(--color-brand-primary-s10);
+  --bs-btn-active-color: var(--color-brand-light);
+  --bs-btn-active-bg: var(--color-brand-primary-s20);
+  --bs-btn-active-border-color: var(--color-brand-primary-s20);
+}
+
+.btn-brand-secondary {
+  --bs-btn-font-weight: 600;
+  --bs-btn-color: var(--color-brand-light);
+  --bs-btn-bg: var(--color-brand-secondary);
+  --bs-btn-border-color: var(--color-brand-secondary);
+  --bs-btn-hover-color: var(--color-brand-light);
+  --bs-btn-hover-bg: var(--color-brand-secondary-s10);
+  --bs-btn-hover-border-color: var(--color-brand-secondary-s10);
+  --bs-btn-active-color: var(--color-brand-light);
+  --bs-btn-active-bg: var(--color-brand-secondary-s20);
+  --bs-btn-active-border-color: var(--color-brand-secondary-s20);
+}
+
+.dropdown-toggle::after {
+  margin-left: 0.5rem;
+  vertical-align: 0.1em;
+  border-top: 0.4em solid;
+  border-right: 0.4em solid transparent;
+  border-left: 0.4em solid transparent;
+}

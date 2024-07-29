@@ -4,387 +4,371 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pedido - Droguería Santo Remedio</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.min.css" />
 
-    <link rel="shortcut icon" href="/img/logo_rif-1-300x155.png" type="image/x-icon" />
-    <link rel="stylesheet" href="/css/site.css" />
-    <link rel="stylesheet" href="/css/Header.css" />
-    <!-- <link rel="stylesheet" type="text/css" href="/css/datatables.min.css" /> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <link href="https://cdn.datatables.net/v/bs5/dt-2.1.2/b-3.1.0/kt-2.12.1/r-3.0.2/datatables.min.css" rel="stylesheet" />
+
+    <link rel="shortcut icon" href="/img/brand-icon.svg" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="/css/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="/css/global.css" />
+    <link rel="stylesheet" type="text/css" href="/css/site.css" />
+    <link rel="stylesheet" href="/css/header.css" />
     <link rel="stylesheet" type="text/css" href="/css/overlay.css" />
     <link rel="stylesheet" type="text/css" href="/css/pedidos.css" />
   </head>
   <body>
     <header id="header">
-      <div class="top-header">
-        <ul class="navbar-nav flex-row text-white justify-content-center justify-content-md-start flex-wrap">
-          <li>
-            <a href="https://www.google.com/maps/search/?api=1&query=Droguería+Santo+Remedio,+C.A.&query_place_id=ChIJMS8DhNdnh44Rn2XWIAry3Ug" class="d-none d-lg-flex">
-              <span class="top-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="11.25" heigth="15" viewBox="0 0 384 512">
-                  <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-                  <path fill="currentColor" d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z" />
-                </svg>
-              </span>
-              <span class="top-text">Drogueria Santo Remedio</span>
-            </a>
-          </li>
-          <li>
-            <a href="mailto:info@drogueriasantoremedio.com">
-              <span class="top-icon"
-                ><svg xmlns="http://www.w3.org/2000/svg" height="15" width="15" viewBox="0 0 512 512">
-                  <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-                  <path fill="currentColor" d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z" />
-                </svg>
-              </span>
-              <span class="top-text">info@drogueriasantoremedio.com</span>
-            </a>
-          </li>
-          <li>
-            <a href="tel:02512691919">
-              <span class="top-icon"
-                ><svg xmlns="http://www.w3.org/2000/svg" height="15" width="15" viewBox="0 0 512 512">
-                  <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-                  <path fill="currentColor" d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z" />
-                </svg>
-              </span>
-              <span class="top-text">0251-2691919</span>
-            </a>
-          </li>
-        </ul>
-      </div>
-      <nav class="navbar navbar-expand-lg navbar-light bg-white">
-        <div class="container lg-fluid">
-          <div class="container d-flex justify-content-between">
-            <a href="https://www.drogueriasantoremedio.com" class="navbar-brand">
-              <img width="166" height="86" src="https://drogueriasantoremedio.com/wp/wp-content/uploads/2022/05/logo_rif-1-300x155.png" class="attachment-medium size-medium" alt="" loading="lazy" srcset="https://drogueriasantoremedio.com/wp/wp-content/uploads/2022/05/logo_rif-1-300x155.png 300w, https://drogueriasantoremedio.com/wp/wp-content/uploads/2022/05/logo_rif-1-768x397.png 768w, https://drogueriasantoremedio.com/wp/wp-content/uploads/2022/05/logo_rif-1.png 794w" sizes="(max-width: 300px) 100vw, 300px" />
-            </a>
-            <button style="font-size: 25px" class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#header-nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <svg xmlns="http://www.w3.org/2000/svg" class="fa-bars" height="25" width="21.88" viewBox="0 0 448 512">
-                <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-                <path fill="currentColor" d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
-              </svg>
-              <svg xmlns="http://www.w3.org/2000/svg" class="fa-xmark" height="25" width="18.25" viewBox="0 0 384 512">
-                <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-                <path fill="currentColor" d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
-              </svg>
-            </button>
-          </div>
-
-          <div class="collapse navbar-collapse" id="header-nav">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="/">Inicio</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/pedido">Pedidos</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a href="#" class="nav-link dropdown-toggle d-flex align-items-center" id="navbarConsultas" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <span class="d-inline-block text-truncate" style="max-width: 260px"> Consultas </span>
-                  <svg xmlns="http://www.w3.org/2000/svg" height="17" width="10.63" viewBox="0 0 320 512">
-                    <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-                    <path fill="currentColor" d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z" />
-                  </svg>
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarConsultas">
-                  <a class="dropdown-item" href="/consultas" data-bs-target="#tabPedidos">Pedidos</a>
-                  <a class="dropdown-item" href="/consultas?tab=facturas" data-bs-target="#tabFacturas">Facturas</a>
-                </div>
-              </li>
-              <li class="nav-item dropdown">
-                <a href="#" class="nav-link dropdown-toggle d-flex align-items-center" id="navbarUser" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <svg xmlns="http://www.w3.org/2000/svg" height="17" width="17" viewBox="0 0 512 512">
-                    <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-                    <path fill="currentColor" d="M406.5 399.6C387.4 352.9 341.5 320 288 320H224c-53.5 0-99.4 32.9-118.5 79.6C69.9 362.2 48 311.7 48 256C48 141.1 141.1 48 256 48s208 93.1 208 208c0 55.7-21.9 106.2-57.5 143.6zm-40.1 32.7C334.4 452.4 296.6 464 256 464s-78.4-11.6-110.5-31.7c7.3-36.7 39.7-64.3 78.5-64.3h64c38.8 0 71.2 27.6 78.5 64.3zM256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm0-272a40 40 0 1 1 0-80 40 40 0 1 1 0 80zm-88-40a88 88 0 1 0 176 0 88 88 0 1 0 -176 0z" />
-                  </svg>
-                  <span class="d-inline-block text-truncate" style="max-width: 260px"> cliente@prueba.com </span>
-                  <svg xmlns="http://www.w3.org/2000/svg" height="17" width="10.63" viewBox="0 0 320 512">
-                    <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-                    <path fill="currentColor" d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z" />
-                  </svg>
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarUser">
-                  <a href="/usuario/cambiarclave" class="dropdown-item">Cambiar Clave</a>
-                  <a href="/Identity/Account/Logout?ReturnUrl=/" class="dropdown-item">Cerrar Sesión</a>
-                </div>
-              </li>
-            </ul>
-          </div>
+      <nav class="navbar navbar-expand-lg mb-3">
+        <div class="d-lg-none container">
+          <button class="navbar-toggler collapsed ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#header-nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <svg xmlns="http://www.w3.org/2000/svg" class="fa-bars" height="25" width="21.88" viewBox="0 0 448 512">
+              <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+              <path fill="currentColor" d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" class="fa-xmark" height="25" width="18.25" viewBox="0 0 384 512">
+              <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+              <path fill="currentColor" d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
+            </svg>
+          </button>
         </div>
-      </nav>
-      <div class="d-flex justify-content-center w-100">
+        <div class="collapse navbar-collapse" id="header-nav">
+          <ul class="navbar-nav d-flex w-100">
+            <li class="nav-item">
+              <a class="nav-link" href="/">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/pedido">Pedidos</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle d-flex align-items-center" id="navbarConsultas" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="d-inline-block text-truncate" style="max-width: 260px"> Consultas </span>
+                <svg xmlns="http://www.w3.org/2000/svg" height="17" width="10.63" viewBox="0 0 320 512">
+                  <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                  <path fill="currentColor" d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z" />
+                </svg>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarConsultas">
+                <a class="dropdown-item" href="/consultas" data-bs-target="#tabPedidos">Pedidos</a>
+                <a class="dropdown-item" href="/consultas?tab=facturas" data-bs-target="#tabFacturas">Facturas</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown ms-lg-auto">
+              <button class="d-none d-lg-flex gap-2 align-items-center dropdown-toggle btn btn-brand-secondary rounded-pill lh-lg" id="navbarUser" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <svg xmlns="http://www.w3.org/2000/svg" height="17" width="17" viewBox="0 0 512 512">
+                  <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                  <path fill="currentColor" d="M406.5 399.6C387.4 352.9 341.5 320 288 320H224c-53.5 0-99.4 32.9-118.5 79.6C69.9 362.2 48 311.7 48 256C48 141.1 141.1 48 256 48s208 93.1 208 208c0 55.7-21.9 106.2-57.5 143.6zm-40.1 32.7C334.4 452.4 296.6 464 256 464s-78.4-11.6-110.5-31.7c7.3-36.7 39.7-64.3 78.5-64.3h64c38.8 0 71.2 27.6 78.5 64.3zM256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm0-272a40 40 0 1 1 0-80 40 40 0 1 1 0 80zm-88-40a88 88 0 1 0 176 0 88 88 0 1 0 -176 0z" />
+                </svg>
+                <span class="d-inline-block text-truncate" style="max-width: 260px">cliente@prueba.com</span>
+                <svg xmlns="http://www.w3.org/2000/svg" height="17" width="10.63" viewBox="0 0 320 512">
+                  <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                  <path fill="currentColor" d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z" />
+                </svg>
+              </button>
+              <a href="#" class="d-lg-none nav-link dropdown-toggle d-flex align-items-center" id="navbarUser" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <svg xmlns="http://www.w3.org/2000/svg" height="17" width="17" viewBox="0 0 512 512">
+                  <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                  <path fill="currentColor" d="M406.5 399.6C387.4 352.9 341.5 320 288 320H224c-53.5 0-99.4 32.9-118.5 79.6C69.9 362.2 48 311.7 48 256C48 141.1 141.1 48 256 48s208 93.1 208 208c0 55.7-21.9 106.2-57.5 143.6zm-40.1 32.7C334.4 452.4 296.6 464 256 464s-78.4-11.6-110.5-31.7c7.3-36.7 39.7-64.3 78.5-64.3h64c38.8 0 71.2 27.6 78.5 64.3zM256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm0-272a40 40 0 1 1 0-80 40 40 0 1 1 0 80zm-88-40a88 88 0 1 0 176 0 88 88 0 1 0 -176 0z" />
+                </svg>
+                <span class="d-inline-block text-truncate" style="max-width: 260px"> cliente@prueba.com </span>
+                <svg xmlns="http://www.w3.org/2000/svg" height="17" width="10.63" viewBox="0 0 320 512">
+                  <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                  <path fill="currentColor" d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z" />
+                </svg>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarUser">
+                <a href="/usuario/cambiarclave" class="dropdown-item">Cambiar Clave</a>
+                <a href="/Identity/Account/Logout?ReturnUrl=/" class="dropdown-item">Cerrar Sesión</a>
+              </div>
+            </li>
+          </ul>
+        </div>
         <div class="etiqueta-entorno">
           <span>Entorno de pruebas</span>
         </div>
+      </nav>
+      <div class="container">
+        <a href="https://www.drogueriasantoremedio.com" class="navbar-brand">
+          <img width="222" height="68" src="../img/logo_222x68.png" class="attachment-medium size-medium" alt="" loading="lazy" sizes="(max-width: 300px) 100vw, 300px" />
+        </a>
       </div>
     </header>
-    <div class="container">
-      <!--<partial name="_CookieConsentPartial" />-->
-      <main role="main" class="pb-3">
-        <div class="container" style="padding-bottom: 15px">
+    <main role="main" class="container pb-3">
+      <div class="row">
+        <div class="col-lg-4 order-lg-1">
           <div class="row">
-            <div class="col-sm-3">
-              <div class="card">
-                <a href="/pedido/revision">
-                  <img src="/img/box-2864335_640.png" class="card-img-top img-fluid" />
-                </a>
-                <div class="card-body">
-                  <div id="resumenDiv">
-                    <p class="card-text">
-                      0 ítems, 0 unidades<br />
-                      <b>Total: </b>0,00
-                    </p>
-                  </div>
-                  <div class="d-grid gap-2">
-                    <a href="/pedido/revision" class="btn btn-success rounded-5">Ver Pedido</a>
-                    <button class="btn btn-outline-primary" id="btnCargarPedidoExcel" data-bs-target="#modalCargarPedidoExcel" data-bs-toggle="modal">Cargar Pedido de Excel</button>
-                  </div>
+            <div class="col-md-6 col-lg-12 mb-3">
+              <div class="cart">
+                <h2>Pedido</h2>
+                <div id="resumenDiv" class="cart__sumary">
+                  <p>
+                    <b>0 ítems, 0 unidades</b>
+                    <br />
+                    Total: 0,00
+                  </p>
+                </div>
+                <div class="d-grid gap-2">
+                  <a href="/pedido/revision" class="btn btn-brand-primary btn-lg rounded-pill">Ver Pedido</a>
+                  <button class="btn btn-brand-secondary btn-lg rounded-pill" id="btnCargarPedidoExcel" data-bs-target="#modalCargarPedidoExcel" data-bs-toggle="modal">Cargar Pedido de Excel</button>
                 </div>
               </div>
             </div>
-            <div class="col-sm-9">
-              <div class="card">
-                <div class="card-header">
-                  <p id="ClienteId" val="578" hidden>578</p>
-                  <div id="custom-search-input">
-                    <div class="row">
-                      <div class="col-2 btn-group dropend">
-                        <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          <svg viewBox="0 0 13 16" width="13" height="16" version="1.1" class="octicon octicon-diff">
-                            <path fill-rule="evenodd" d="M6 7h2v1H6v2H5V8H3V7h2V5h1v2zm-3 6h5v-1H3v1zM7.5 2L11 5.5V15c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V3c0-.55.45-1 1-1h6.5zM10 6L7 3H1v12h9V6zM8.5 0H3v1h5l4 4v8h1V4.5L8.5 0z" />
-                          </svg>
-                        </button>
-                        <div class="dropdown-menu">
-                          <h5 class="dropdown-header">Cargar Artículos</h5>
-                          <div class="dropdown-divider"></div>
-                          <button class="dropdown-item" type="button" onclick="BuscaEntradas()">Últimas entradas</button>
-                          <button class="dropdown-item" type="button" onclick="ListaLaboratorios()">Laboratorio</button>
-                          <button class="dropdown-item" type="button" onclick="ListaOfertas()">Ofertas</button>
-                        </div>
-                      </div>
-                      <div class="col-10">
-                        <div class="input-group">
-                          <input id="busquedaDescripcion" name="busquedaDescripcion" type="search" placeholder="Búsqueda" onkeypress="EnterBusqueda(event)" autofocus class="form-control form-control-lg form-control-borderless" />
-                          <span class="input-group-btn">
-                            <button class="btn btn-lg btn-outline-secondary" onclick="BuscaItems()">
-                              <svg viewBox="0 0 16 16" width="16" height="16" version="1.1" class="octicon octicon-search">
-                                <path fill-rule="evenodd" d="M15.7 13.3l-3.81-3.83A5.93 5.93 0 0 0 13 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 0 0 0-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z" />
-                              </svg>
-                            </button>
-                          </span>
-                        </div>
-                      </div>
-                    </div>
+            <div class="col-md-6 col-lg-12 mb-3">
+              <div id="carouselExampleFade" class="carousel slide carousel-fade rounded-4 overflow-hidden">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="/img/Template_Web-05.jpg" class="d-block w-100" alt="..." />
+                  </div>
+                  <div class="carousel-item">
+                    <img src="/img/Template_Web-07.jpg" class="d-block w-100" alt="..." />
+                  </div>
+                  <div class="carousel-item">
+                    <img src="/img/Template_Web-05.jpg" class="d-block w-100" alt="..." />
+                  </div>
+                  <div class="carousel-item">
+                    <img src="/img/Template_Web-07.jpg" class="d-block w-100" alt="..." />
                   </div>
                 </div>
-                <div class="card-body">
-                  <div id="errorAjaxCall">
-                    <!-- Espacio para errores en llamadas Ajax -->
-                  </div>
-                  <table id="tablaProductos" class="table table-hover table-striped" style="width: 100%">
-                    <thead>
-                      <tr>
-                        <th width="10%">Cargar</th>
-                        <th width="65%">Descripción</th>
-                        <th width="10%">Disponible</th>
-                        <th width="15%">Precio</th>
-                      </tr>
-                    </thead>
-                    <tbody id="tablaBusqueda"></tbody>
-                    <tbody></tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Modal para agregar a carrito -->
-          <div id="modalAgrega" class="modal fade" role="dialog" aria-hidden="true">
-            <div id="agregaItem">
-              <div class="modal-dialog" role="document">
-                <div>
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title">Agregar a Cesta de Compra</h5>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <form id="formEnviaItem" method="post">
-                      <input type="hidden" value="0" data-val="true" data-val-required="The Id field is required." id="Id" name="Id" />
-                      <input type="hidden" value="4763" data-val="true" data-val-required="The ArticuloId field is required." id="ArticuloId" name="ArticuloId" />
-                      <input type="hidden" value="578" data-val="true" data-val-required="The ClienteId field is required." id="ClienteId" name="ClienteId" />
-                      <input type="hidden" value="797" data-val="true" data-val-required="The UsuarioId field is required." id="UsuarioId" name="UsuarioId" />
-                      <input type="hidden" value="2" data-val="true" data-val-required="The VendedorId field is required." id="VendedorId" name="VendedorId" />
-                      <input type="hidden" value="34,75" data-val="true" data-val-number="The field Precio must be a number." data-val-range="¡Error en cifra!" data-val-range-max="1.7976931348623157E+308" data-val-range-min="0" data-val-required="The Precio field is required." id="Precio" name="Precio" />
-                      <p id="buttonLabel" hidden="">0</p>
-
-                      <div class="modal-body">
-                        <div class="card">
-                          <div class="row">
-                            <div class="col-sm-3">
-                              <img src="/img/loginphoto.jpg" class="img-fluid" style="padding-top: 25px; padding-left: 10px" />
-                            </div>
-                            <div class="card-body">
-                              <p>
-                                Adh Briut Plas Trans 2,54cm X 4,57m X 1<br />
-                                <small>Inversiones M. R. C. S. 21, C. A</small><br />
-                                <b>P.V.P.: </b> 34,75<br />
-                                <b>Disponible:</b> 459<br />
-                                <b><small>16,00% I.V.A. </small></b>
-                                <br />
-                                <b><small>Vecimiento 1/6/2028</small></b>
-                                <br />
-                                <span class="badge bg-danger text-light">
-                                  Oferta: 33,71
-                                  <br />
-                                  <br />
-                                  3,0% - Mínimo: 1. De 1/4/2024 a 5/7/2024
-                                </span>
-                                <br />
-                                <small>* Precios y existencias sujeto a disponibilidad</small>
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <br />
-                        <div class="row" style="padding-bottom: 5px">
-                          <div class="col-sm-4">
-                            <p><b>Localidad</b></p>
-                          </div>
-                          <div class="col-sm-4">
-                            <p><b>Cantidad</b></p>
-                          </div>
-                        </div>
-
-                        <div class="row" style="padding-bottom: 5px">
-                          <div class="col-sm-4">
-                            <p><b>CARICUAO</b></p>
-                          </div>
-                          <div class="col-sm-4">
-                            <input name="seleccionId" type="hidden" value="567" />
-                            <input id="seleccionValue" name="seleccionValue" type="number" class="form-control" style="text-align: right" min="0" value="0" autofocus="" />
-                          </div>
-                          <div class="col-sm-4">
-                            <button type="button" class="btn btn-outline-secondary btn-sm" onclick="ReplicaCantidades()">Igualar cantidad</button>
-                          </div>
-                        </div>
-                        <div class="row" style="padding-bottom: 5px">
-                          <div class="col-sm-4">
-                            <p><b>CATIA 3</b></p>
-                          </div>
-                          <div class="col-sm-4">
-                            <input name="seleccionId" type="hidden" value="568" />
-                            <input name="seleccionValue" type="number" class="form-control" style="text-align: right" min="0" value="0" />
-                          </div>
-                        </div>
-                        <div class="row" style="padding-bottom: 5px">
-                          <div class="col-sm-4">
-                            <p><b>LA VEGA</b></p>
-                          </div>
-                          <div class="col-sm-4">
-                            <input name="seleccionId" type="hidden" value="569" />
-                            <input name="seleccionValue" type="number" class="form-control" style="text-align: right" min="0" value="0" />
-                          </div>
-                        </div>
-                        <div class="row" style="padding-bottom: 5px">
-                          <div class="col-sm-4">
-                            <p><b>GUARENAS</b></p>
-                          </div>
-                          <div class="col-sm-4">
-                            <input name="seleccionId" type="hidden" value="570" />
-                            <input name="seleccionValue" type="number" class="form-control" style="text-align: right" min="0" value="0" />
-                          </div>
-                        </div>
-                        <div class="row" style="padding-bottom: 5px">
-                          <div class="col-sm-4">
-                            <p><b>EL VALLE</b></p>
-                          </div>
-                          <div class="col-sm-4">
-                            <input name="seleccionId" type="hidden" value="571" />
-                            <input name="seleccionValue" type="number" class="form-control" style="text-align: right" min="0" value="0" />
-                          </div>
-                        </div>
-                        <div class="row" style="padding-bottom: 5px">
-                          <div class="col-sm-4">
-                            <p><b>EL PARAISO</b></p>
-                          </div>
-                          <div class="col-sm-4">
-                            <input name="seleccionId" type="hidden" value="572" />
-                            <input name="seleccionValue" type="number" class="form-control" style="text-align: right" min="0" value="0" />
-                          </div>
-                        </div>
-                        <div class="row" style="padding-bottom: 5px">
-                          <div class="col-sm-4">
-                            <p><b>CATIA 1</b></p>
-                          </div>
-                          <div class="col-sm-4">
-                            <input name="seleccionId" type="hidden" value="573" />
-                            <input name="seleccionValue" type="number" class="form-control" style="text-align: right" min="0" value="0" />
-                          </div>
-                        </div>
-                      </div>
-                      <div class="modal-footer text-center">
-                        <button id="addItemButton" type="submit" class="btn btn-primary">Agregar</button>
-                        <button id="cancelButton" type="button" class="btn btn-outline-secondary" data-dismiss="modal">Cancelar</button>
-                      </div>
-                      <input name="__RequestVerificationToken" type="hidden" value="CfDJ8LJ1wT-wGzNCp57-0KN8nJuToCchiegKp1VBI-OkwieYbLAT01mFzz4O-1GCct0oznbQ0MY-90qNvOdXvzQ43BNVU60KuMGj0fmQnkVc9kOTmlclduHH38o4D26rua9cM-Xm6iEoCCFB6geV9w5j4YzzFC6pFeh_h1waB52DEhhJ2ZyWiC2dTeJ1N7TAJiSJFw" />
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Modal para búsqueda de cliente -->
-          <!-- Modal para selección de laboratorios -->
-          <div id="modalLaboratorio" class="modal fade" role="dialog" tabindex="-1" aria-hidden="true">
-            <div id="listaLaboratorios"></div>
-          </div>
-          <!-- Modal para cargar pedido de excel -->
-          <div class="modal fade" id="modalCargarPedidoExcel">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title">Cargar pedido desde Excel</h5>
-                </div>
-                <div class="modal-body">
-                  <form enctype="multipart/form-data" id="formCargarPedidoExcel" method="post" action="/Pedido/CargarPedidoDeArchivo">
-                    <input type="hidden" name="ClienteId" id="clienteIdInput" value="578" />
-                    <input type="file" id="archivoInput" name="Archivo" class="form-control" required accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" />
-                    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8LJ1wT-wGzNCp57-0KN8nJu71-u6uMo8jcSG3tyK5b-Z46MRMJi72rkAtRxF5ryJ81tSH86MY0XiLrmIbM2SJyHTOBudrqrJxgnfWE5VX0zlQ_Do6C4qAuuqAmtyWBOx0KaMiHE-5MlTMnW00RfZIxpU4Pfq0ymSui7lVJdpypy7k42JmYAEozl0W_0s7IB96w" />
-                  </form>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                  <button type="submit" class="btn btn-primary" form="formCargarPedidoExcel">Cargar</button>
-                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
               </div>
             </div>
           </div>
         </div>
-      </main>
-    </div>
-
-    <footer class="footer text-muted">
-      <div class="container text-center">
-        <small>
-          &copy; 2019-2024 -
-          <a href="https://www.drogueriasantoremedio.com" target="_blank">Droguería Santo Remedio, C.A.</a>
-          [1.1.3.1]
-        </small>
+        <div class="col-lg-8 order-lg-0 overflow-x-auto">
+          <div class="main-table">
+            <div class="main-table__header">
+              <p id="ClienteId" val="578" hidden>578</p>
+              <div id="custom-search-input">
+                <div class="row">
+                  <div class="col-sm-5 btn-group dropdown mb-3">
+                    <button class="dropdown-toggle btn btn-light lh-lg rounded-pill" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Cargar Artículos</button>
+                    <div class="dropdown-menu main-table__dropdown">
+                      <button class="dropdown-item" type="button" onclick="BuscaEntradas()">Últimas entradas</button>
+                      <button class="dropdown-item" type="button" onclick="ListaLaboratorios()">Laboratorio</button>
+                      <button class="dropdown-item" type="button" onclick="ListaOfertas()">Ofertas</button>
+                    </div>
+                  </div>
+                  <div class="col-sm-7 mb-3">
+                    <div class="input-group rounded-pill overflow-hidden">
+                      <input class="form-control" id="busquedaDescripcion" name="busquedaDescripcion" type="search" placeholder="Búsqueda" onkeypress="EnterBusqueda(event)" autofocus />
+                      <button onclick="BuscaItems()" class="btn btn-brand-secondary px-3 lh-lg">
+                        <svg viewBox="0 0 16 16" width="16" height="16" version="1.1" class="octicon octicon-search">
+                          <path stroke="#fff" stroke-width="1" fill="#fff" fill-rule="evenodd" d="M15.7 13.3l-3.81-3.83A5.93 5.93 0 0 0 13 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 0 0 0-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z" />
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div id="errorAjaxCall">
+                <!-- Espacio para errores en llamadas Ajax -->
+              </div>
+              <table id="tablaProductos" class="display table table-hover table-striped" style="width: 100%">
+                <thead>
+                  <tr>
+                    <th class="text-center" width="15%">Cargar</th>
+                    <th width="60%">Descripción</th>
+                    <th width="10%">Disponible</th>
+                    <th width="15%">Precio</th>
+                  </tr>
+                </thead>
+                <tbody id="tablaBusqueda" class="main-table__text"></tbody>
+                <tbody></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer text-light">
+      <div class="container text-center d-flex justify-content-between align-items-center flex-wrap gap-3 py-5">
+        <img class="order-lg-0" src="/img/Santo-Remedio-logo-light.png" alt="Santo Remedio Logo" width="178" height="54" />
+        <span class="fs-4 fst-italic order-lg-2">Comprometidos con tu farmacia.</span>
+        <a href="https://www.drogueriasantoremedio.com/contacto" target="_blank" class="order-lg-1">Para soporte hacer click aquí</a>
       </div>
     </footer>
 
+    <!-- Modal para agregar a carrito -->
+    <div id="modalAgrega" class="modal fade" role="dialog" aria-hidden="true">
+      <div id="agregaItem">
+        <div class="modal-dialog" role="document">
+          <div>
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Agregar a Cesta de Compra</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <form id="formEnviaItem" method="post">
+                <input type="hidden" value="0" data-val="true" data-val-required="The Id field is required." id="Id" name="Id" />
+                <input type="hidden" value="4763" data-val="true" data-val-required="The ArticuloId field is required." id="ArticuloId" name="ArticuloId" />
+                <input type="hidden" value="578" data-val="true" data-val-required="The ClienteId field is required." id="ClienteId" name="ClienteId" />
+                <input type="hidden" value="797" data-val="true" data-val-required="The UsuarioId field is required." id="UsuarioId" name="UsuarioId" />
+                <input type="hidden" value="2" data-val="true" data-val-required="The VendedorId field is required." id="VendedorId" name="VendedorId" />
+                <input type="hidden" value="34,75" data-val="true" data-val-number="The field Precio must be a number." data-val-range="¡Error en cifra!" data-val-range-max="1.7976931348623157E+308" data-val-range-min="0" data-val-required="The Precio field is required." id="Precio" name="Precio" />
+                <p id="buttonLabel" hidden="">0</p>
+
+                <div class="modal-body">
+                  <div class="card">
+                    <div class="row">
+                      <div class="col-sm-3">
+                        <img src="/img/loginphoto.jpg" class="img-fluid" style="padding-top: 25px; padding-left: 10px" />
+                      </div>
+                      <div class="card-body">
+                        <p>
+                          Adh Briut Plas Trans 2,54cm X 4,57m X 1<br />
+                          <small>Inversiones M. R. C. S. 21, C. A</small><br />
+                          <b>P.V.P.: </b> 34,75<br />
+                          <b>Disponible:</b> 459<br />
+                          <b><small>16,00% I.V.A. </small></b>
+                          <br />
+                          <b><small>Vecimiento 1/6/2028</small></b>
+                          <br />
+                          <span class="badge bg-danger text-light">
+                            Oferta: 33,71
+                            <br />
+                            <br />
+                            3,0% - Mínimo: 1. De 1/4/2024 a 5/7/2024
+                          </span>
+                          <br />
+                          <small>* Precios y existencias sujeto a disponibilidad</small>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <br />
+                  <div class="row" style="padding-bottom: 5px">
+                    <div class="col-sm-4">
+                      <p><b>Localidad</b></p>
+                    </div>
+                    <div class="col-sm-4">
+                      <p><b>Cantidad</b></p>
+                    </div>
+                  </div>
+
+                  <div class="row" style="padding-bottom: 5px">
+                    <div class="col-sm-4">
+                      <p><b>CARICUAO</b></p>
+                    </div>
+                    <div class="col-sm-4">
+                      <input name="seleccionId" type="hidden" value="567" />
+                      <input id="seleccionValue" name="seleccionValue" type="number" class="form-control" style="text-align: right" min="0" value="0" autofocus="" />
+                    </div>
+                    <div class="col-sm-4">
+                      <button type="button" class="btn btn-outline-secondary btn-sm" onclick="ReplicaCantidades()">Igualar cantidad</button>
+                    </div>
+                  </div>
+                  <div class="row" style="padding-bottom: 5px">
+                    <div class="col-sm-4">
+                      <p><b>CATIA 3</b></p>
+                    </div>
+                    <div class="col-sm-4">
+                      <input name="seleccionId" type="hidden" value="568" />
+                      <input name="seleccionValue" type="number" class="form-control" style="text-align: right" min="0" value="0" />
+                    </div>
+                  </div>
+                  <div class="row" style="padding-bottom: 5px">
+                    <div class="col-sm-4">
+                      <p><b>LA VEGA</b></p>
+                    </div>
+                    <div class="col-sm-4">
+                      <input name="seleccionId" type="hidden" value="569" />
+                      <input name="seleccionValue" type="number" class="form-control" style="text-align: right" min="0" value="0" />
+                    </div>
+                  </div>
+                  <div class="row" style="padding-bottom: 5px">
+                    <div class="col-sm-4">
+                      <p><b>GUARENAS</b></p>
+                    </div>
+                    <div class="col-sm-4">
+                      <input name="seleccionId" type="hidden" value="570" />
+                      <input name="seleccionValue" type="number" class="form-control" style="text-align: right" min="0" value="0" />
+                    </div>
+                  </div>
+                  <div class="row" style="padding-bottom: 5px">
+                    <div class="col-sm-4">
+                      <p><b>EL VALLE</b></p>
+                    </div>
+                    <div class="col-sm-4">
+                      <input name="seleccionId" type="hidden" value="571" />
+                      <input name="seleccionValue" type="number" class="form-control" style="text-align: right" min="0" value="0" />
+                    </div>
+                  </div>
+                  <div class="row" style="padding-bottom: 5px">
+                    <div class="col-sm-4">
+                      <p><b>EL PARAISO</b></p>
+                    </div>
+                    <div class="col-sm-4">
+                      <input name="seleccionId" type="hidden" value="572" />
+                      <input name="seleccionValue" type="number" class="form-control" style="text-align: right" min="0" value="0" />
+                    </div>
+                  </div>
+                  <div class="row" style="padding-bottom: 5px">
+                    <div class="col-sm-4">
+                      <p><b>CATIA 1</b></p>
+                    </div>
+                    <div class="col-sm-4">
+                      <input name="seleccionId" type="hidden" value="573" />
+                      <input name="seleccionValue" type="number" class="form-control" style="text-align: right" min="0" value="0" />
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer text-center">
+                  <button id="addItemButton" type="submit" class="btn btn-primary">Agregar</button>
+                  <button id="cancelButton" type="button" class="btn btn-outline-secondary" data-dismiss="modal">Cancelar</button>
+                </div>
+                <input name="__RequestVerificationToken" type="hidden" value="CfDJ8LJ1wT-wGzNCp57-0KN8nJuToCchiegKp1VBI-OkwieYbLAT01mFzz4O-1GCct0oznbQ0MY-90qNvOdXvzQ43BNVU60KuMGj0fmQnkVc9kOTmlclduHH38o4D26rua9cM-Xm6iEoCCFB6geV9w5j4YzzFC6pFeh_h1waB52DEhhJ2ZyWiC2dTeJ1N7TAJiSJFw" />
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal para búsqueda de cliente -->
+
+    <!-- Modal para selección de laboratorios -->
+    <div id="modalLaboratorio" class="modal fade" role="dialog" tabindex="-1" aria-hidden="true">
+      <div id="listaLaboratorios"></div>
+    </div>
+
+    <!-- Modal para cargar pedido de excel -->
+    <div class="modal fade" id="modalCargarPedidoExcel">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Cargar pedido desde Excel</h5>
+          </div>
+          <div class="modal-body">
+            <form enctype="multipart/form-data" id="formCargarPedidoExcel" method="post" action="/Pedido/CargarPedidoDeArchivo">
+              <input type="hidden" name="ClienteId" id="clienteIdInput" value="578" />
+              <input type="file" id="archivoInput" name="Archivo" class="form-control" required accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" />
+              <input name="__RequestVerificationToken" type="hidden" value="CfDJ8LJ1wT-wGzNCp57-0KN8nJu71-u6uMo8jcSG3tyK5b-Z46MRMJi72rkAtRxF5ryJ81tSH86MY0XiLrmIbM2SJyHTOBudrqrJxgnfWE5VX0zlQ_Do6C4qAuuqAmtyWBOx0KaMiHE-5MlTMnW00RfZIxpU4Pfq0ymSui7lVJdpypy7k42JmYAEozl0W_0s7IB96w" />
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn btn-primary" form="formCargarPedidoExcel">Cargar</button>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 
-    <script src="https://cdn.datatables.net/2.0.8/js/dataTables.js"></script>
+    <script src="https://cdn.datatables.net/v/bs5/dt-2.1.2/b-3.1.0/kt-2.12.1/r-3.0.2/datatables.min.js"></script>
+
     <script src="./js/pedido.js"></script>
 
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" crossorigin="anonymous" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" crossorigin="anonymous" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o"></script> -->
-    <!-- <script type="text/javascript" src="/js/datatables.min.js"></script> -->
     <script>
       $(function () {
         $('[data-toggle="tooltip"]').tooltip();
@@ -396,15 +380,6 @@
           }
         });
       });
-
-      /* let table = new DataTable('#tablaProductos', {
-        responsive: true,
-        paging: false,
-        scrollCollapse: true,
-        scrollY: '400px',
-        ordering: false,
-        dom: 'lrt',
-      }); */
     </script>
   </body>
 </html>

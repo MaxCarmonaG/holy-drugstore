@@ -1,3 +1,179 @@
+/* Shopping cart styles
+-------------------------------------------------- */
+.cart {
+  padding: 2rem 1.5rem 2.5rem;
+  border: 3px solid var(--color-brand-primary);
+  border-radius: 15px;
+  font-size: 18px;
+}
+
+.cart h2 {
+  color: var(--color-brand-primary);
+  font-size: 36px;
+  line-height: 38px;
+  margin-bottom: 1rem;
+}
+
+.cart__img {
+  max-width: 9.5rem;
+  margin: 0 auto 2rem;
+  display: block;
+}
+
+.cart__sumary {
+  margin-bottom: 1.5rem;
+  line-height: 24px;
+}
+
+.cart__button {
+  cursor: pointer;
+  color: var(--color-brand-light);
+  line-height: 19px;
+  padding: 1rem 0;
+  text-align: center;
+  border-radius: 31px;
+  text-decoration: none;
+  box-shadow: 0px 3px 6px #00000029;
+  border: 2px solid transparent;
+  font-weight: 700;
+  transition: all 0.3s ease-in-out;
+}
+
+.cart__button--show {
+  background-color: var(--color-brand-primary);
+}
+
+.cart__button--show:hover {
+  background-color: var(--color-brand-light);
+  border-color: var(--color-brand-primary);
+  color: var(--color-brand-primary);
+}
+
+.cart__button--load {
+  background-color: var(--color-brand-secondary);
+}
+
+.cart__button--load:hover {
+  background-color: var(--color-brand-light);
+  border-color: var(--color-brand-secondary);
+  color: var(--color-brand-secondary);
+}
+
+/* Main table styles
+-------------------------------------------------- */
+.main-table {
+  box-shadow: 3px 3px 3px #00000029;
+  border: 1px solid var(--color-gray-3);
+  border-radius: 14px 14px 0 0;
+  margin-bottom: 1rem;
+}
+
+.main-table__header {
+  padding: 1rem 1rem 0 1rem;
+  background-color: var(--color-brand-primary);
+  color: var(--color-gray-4);
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 14px 14px 0 0;
+}
+
+.main-table__dropdown {
+  padding: 0;
+  left: 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0px 0px 30px 0px rgb(0 0 0 / 10%);
+  line-height: 3rem;
+}
+
+.main-table__dropdown .dropdown-item {
+  transition: all 0.3s ease-in-out;
+}
+
+.main-table__dropdown .dropdown-item:not(:last-child) {
+  border-bottom: 1px solid var(--color-gray-3);
+}
+
+.main-table__dropdown .dropdown-item:hover {
+  color: var(--color-brand-light);
+  background-color: var(--color-brand-primary);
+  font-weight: 600;
+}
+
+.main-table__button-load {
+  background-color: var(--color-brand-primary);
+  box-shadow: 0px 3px 6px #00000029;
+  border-radius: 9px;
+  height: 2.5rem;
+  width: 2.5rem;
+  border-color: transparent;
+}
+
+.main-table__button-load:hover {
+  background-color: var(--color-brand-secondary);
+}
+
+.main-table__text {
+  font-size: 18px;
+}
+
+.main-table__text td {
+  padding: 1rem 0.5rem;
+}
+
+.main-table__text small {
+  font-size: 16px;
+}
+
+.main-table__badge {
+  display: block;
+  width: 100%;
+  font-size: 14px;
+  border-radius: 12px;
+  background-color: var(--color-brand-secondary);
+  line-height: 24px;
+  color: var(--color-brand-light);
+  text-align: center;
+}
+
+/* Modal listaLaboratorios */
+/* -------------------------------------------------- */
+
+#listaLaboratorios .modal-header {
+  background-color: var(--color-brand-primary);
+  color: var(--color-brand-light);
+}
+
+#tablaLaboratorios_wrapper .dt-search {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+}
+
+#tablaLaboratorios_wrapper .dt-search input {
+  border-radius: 14px;
+}
+
+#tablaBusquedaLaboratorio td {
+  padding: 1rem 0.5rem;
+}
+
+@media (min-width: 768px) {
+  #tablaLaboratorios_wrapper .dt-search {
+    width: 490px;
+  }
+}
+
+@media (min-width: 768px) {
+  #tablaLaboratorios_wrapper .dt-search {
+    width: 766px;
+  }
+}
+
+/* -------------------------------------------------- */
+
 .dataTables_scrollHead {
   overflow: hidden;
   position: relative;
@@ -38,35 +214,14 @@
 
 #tablaLaboratorios_wrapper .dt-search {
   display: grid;
-  grid-template-columns: 10% 1fr;
+  grid-template-columns: auto 1fr;
   align-items: center;
-  column-gap: 0.5rem;
-  padding: 0 1rem;
+}
 
-  & label {
-    font-weight: 500;
-    text-align: center;
-  }
+#tablaLaboratorios_wrapper .dt-search input {
+  border-radius: 14px;
 }
 
 div:has(> #tablaLaboratorios_filter) {
   position: static;
-}
-
-@media (max-width: 991.99px) {
-  #tablaLaboratorios_filter input {
-    width: 171%;
-  }
-}
-
-@media (max-width: 765.99px) {
-  #tablaLaboratorios_filter input {
-    width: 192%;
-  }
-}
-
-@media (max-width: 575.99px) {
-  #tablaLaboratorios_filter input {
-    width: auto;
-  }
 }
