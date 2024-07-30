@@ -57,8 +57,9 @@ var BuscaEntradas = function () {
 
         errorDiv.html(data);
       } else {
+        updateTable().destroy();
         tabla.html(data);
-        ActualizaTabla();
+        updateTable().draw();
         $('[data-bs-toggle="tooltip"]').tooltip();
       }
     },
@@ -85,7 +86,12 @@ var ListaLaboratorios = function () {
         tabla.html('');
         tabla.html(data);
         tabla.find('#tablaLaboratorios').each(function () {
-          updateTable($(this), { searching: true, layout: { top: 'search', topEnd: null } });
+          updateTable($(this), {
+            searching: true,
+            paging: true,
+            pageLength: 6,
+            layout: { top: 'search', topEnd: null },
+          });
         });
         $('#modalLaboratorio').modal('show');
       }
@@ -115,8 +121,9 @@ var ListaOfertas = function () {
 
         errorDiv.html(data);
       } else {
+        updateTable().destroy();
         tabla.html(data);
-        ActualizaTabla();
+        updateTable().draw();
         $('[data-bs-toggle="tooltip"]').tooltip();
       }
     },
@@ -128,9 +135,7 @@ var ListaOfertas = function () {
 
 // Establece el foco en el campo de búsqueda
 $('#modalLaboratorio').on('shown.bs.modal', function () {
-  var tabla = $('#tablaLaboratorios').DataTable();
-
-  tabla.columns.adjust();
+  $('#tablaLaboratorios').DataTable().columns.adjust();
 });
 
 var ReplicaCantidades = function () {
@@ -259,6 +264,12 @@ $('#modalAgrega').on('shown.bs.modal', function () {
   $('#Cantidad').select();
 });
 
+// Waiting for modalBusquedaCliente to init table
+$('#modalBusquedaCliente').on('shown.bs.modal', function () {
+  updateTable($('#tablaClientes')).columns.adjust();
+});
+
+// Configuración visual de datatable de productos
 const updateTable = function ($table = null, options = {}) {
   const baseOptions = {
     retrieve: true,
@@ -306,88 +317,3 @@ const updateTable = function ($table = null, options = {}) {
 $(document).ready(function () {
   updateTable();
 });
-
-// Configuración visual de datatable de productos
-var ActualizaTabla = function (searching = false, tableId = null) {
-  const targetTable = tableId ?? 'tablaProductos';
-  return $('#' + targetTable).DataTable({
-    retrieve: true,
-    language: {
-      deferRender: true,
-      decimal: ',',
-      thousands: '.',
-      lengthMenu: 'Mostrando _MENU_ registros por página',
-      info: 'Mostrando página _PAGE_ de _PAGES_',
-      sProcessing: 'Procesando...',
-      sZeroRecords: 'No se encontraron resultados',
-      sEmptyTable: '¡Sin información a mostrar!',
-      sInfoEmpty: 'Sin registros',
-      sInfoFiltered: '(filtrado de un total de _MAX_ registros)',
-      sInfoPostFix: '',
-      sSearch: 'Buscar',
-      sUrl: '',
-      sLoadingRecords: 'Cargando...',
-      oPaginate: {
-        sFirst: 'Primero',
-        sLast: 'Último',
-        sNext: 'Siguiente',
-        sPrevious: 'Anterior',
-      },
-      oAria: {
-        sSortAscending: ': Activar para ordenar la columna de manera ascendente',
-        sSortDescending: ': Activar para ordenar la columna de manera descendente',
-      },
-    },
-    info: false,
-    paging: false,
-    scrollY: '50vh',
-    scrollCollapse: true,
-    ordering: false,
-    searching: searching,
-    pageLength: 5,
-    pagingType: 'full_numbers',
-    Responsive: true,
-    bLengthChange: false,
-  });
-};
-
-// Configuración visual de datatable de busqueda en modal
-var ActualizaTablaLaboratorio = function () {
-  $('#tablaLaboratorios').DataTable({
-    retrieve: true,
-    language: {
-      deferRender: true,
-      decimal: ',',
-      thousands: '.',
-      lengthMenu: 'Mostrando _MENU_ registros por página',
-      info: 'Mostrando página _PAGE_ de _PAGES_',
-      sProcessing: 'Procesando...',
-      sZeroRecords: 'No se encontraron resultados',
-      sEmptyTable: '¡Sin información a mostrar!',
-      sInfoEmpty: 'Sin registros',
-      sInfoFiltered: '(filtrado de un total de _MAX_ registros)',
-      sInfoPostFix: '',
-      sSearch: 'Buscar',
-      sUrl: '',
-      sLoadingRecords: 'Cargando...',
-      oPaginate: {
-        sFirst: 'Primero',
-        sLast: 'Último',
-        sNext: 'Siguiente',
-        sPrevious: 'Anterior',
-      },
-      oAria: {
-        sSortAscending: ': Activar para ordenar la columna de manera ascendente',
-        sSortDescending: ': Activar para ordenar la columna de manera descendente',
-      },
-    },
-    info: false,
-    paging: true,
-    scrollCollapse: true,
-    ordering: false,
-    searching: true,
-    pageLength: 6,
-    Responsive: true,
-    bLengthChange: false,
-  });
-};

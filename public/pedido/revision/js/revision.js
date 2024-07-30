@@ -42,7 +42,7 @@ var ProcesarOrden = function (botonConfirmar) {
 
 // Configuración visual de datatable de productos
 var ActualizaTabla = function () {
-  let table = new DataTable('table.table-hover.table-striped', {
+  $('table.table-hover.table-striped').DataTable({
     retrieve: true,
     language: {
       deferRender: true,
@@ -72,7 +72,7 @@ var ActualizaTabla = function () {
     },
     info: false,
     paging: false,
-    scrollY: '71vh',
+    scrollY: '50vh',
     scrollCollapse: true,
     ordering: false,
     searching: false,
@@ -82,3 +82,7 @@ var ActualizaTabla = function () {
     bLengthChange: false,
   });
 };
+
+$(document).ready(function () {
+  ActualizaTabla();
+});

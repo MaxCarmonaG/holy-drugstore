@@ -73,3 +73,21 @@ h6 {
   border-right: 0.4em solid transparent;
   border-left: 0.4em solid transparent;
 }
+
+.bg-brand-primary {
+  background-color: var(--color-brand-primary);
+  color: var(--color-brand-light);
+}
+
+.text-brand-light {
+  color: var(--color-brand-light);
+}
+
+.pagination {
+  --bs-pagination-color: var(--color-brand-dark);
+  --bs-pagination-hover-color: var(--color-brand-primary);
+  --bs-pagination-active-bg: var(--color-brand-primary);
+  --bs-pagination-active-border-color: var(--color-brand-primary);
+  --bs-pagination-focus-color: var(--color-brand-primary);
+  --bs-pagination-focus-box-shadow: 0 0 0 0.25rem rgba(190, 0, 0, 0.25);
+}

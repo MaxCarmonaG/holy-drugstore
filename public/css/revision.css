@@ -1,0 +1,44 @@
+/* Main table styles
+-------------------------------------------------- */
+.main-table {
+  box-shadow: 3px 3px 3px #00000029;
+  border: 1px solid var(--color-gray-3);
+  border-radius: 14px 14px 0 0;
+  margin-bottom: 1rem;
+}
+
+.main-table__header {
+  padding: 1rem 1rem 0.5rem 1rem;
+  background-color: var(--color-brand-primary);
+  color: var(--color-brand-light);
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 14px 14px 0 0;
+}
+
+.main-table #tablaOrden td {
+  padding: 1rem 0.5rem;
+}
+/* -------------------------------------------------- */
+
+/* Shopping cart styles */
+/* -------------------------------------------------- */
+.cart {
+  padding: 2rem 1.5rem 2.5rem;
+  border: 3px solid var(--color-brand-primary);
+  border-radius: 15px;
+  font-size: 18px;
+}
+
+.cart h2 {
+  color: var(--color-brand-primary);
+  font-size: 36px;
+  line-height: 38px;
+  margin-bottom: 1rem;
+}
+
+.cart__sumary {
+  margin-bottom: 1.5rem;
+  line-height: 24px;
+}
+/* -------------------------------------------------- */

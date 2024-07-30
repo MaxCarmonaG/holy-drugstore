@@ -1,9 +1,13 @@
 <div class="modal-dialog" role="document">
   <div>
     <div class="modal-content">
-      <div class="modal-header">
+      <div class="modal-header bg-brand-primary">
         <h5 class="modal-title">Agregar a Cesta de Compra</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button type="button" class="btn btn-brand-primary ms-auto rounded-3" data-bs-dismiss="modal" aria-label="Close">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" width="16" height="16">
+            <path d="M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z"></path>
+          </svg>
+        </button>
       </div>
       <form id="formEnviaItem" method="post">
         <input type="hidden" value="0" data-val="true" data-val-required="The Id field is required." id="Id" name="Id" />
@@ -24,18 +28,18 @@
                 <div class="card-body">
                   <p>
                     Adh Briut De Tela 5,08 Cm X 9,14 M X 1<br />
-                    <small>Inversiones M. R. C. S. 21, C. A</small><br />
+                    <small>Inversiones M. R. C. S. 21, C. A</small><br /><br />
                     <b>P.V.P.: </b> 174,90<br />
                     <b>Disponible:</b> 120<br />
                     <b><small>16,00% I.V.A. </small></b>
                     <br />
                     <b><small>Vecimiento 1/11/2028</small></b>
                     <br />
-                    <span class="badge bg-danger text-light">
-                      <big>Oferta: 169,65</big>
+                    <br />
+                    <span class="badge bg-brand-primary fw-normal">
+                      Oferta: 37,41
                       <br />
-                      <br />
-                      3,0% - M&#xED;nimo: 1. De 1/4/2024 a 5/7/2024
+                      3,0% - Mínimo: 1. De 1/4/2024 a 31/7/2024
                     </span>
                     <br />
                     <small>* Precios y existencias sujeto a disponibilidad</small>
@@ -63,7 +67,7 @@
               <input id="seleccionValue" name="seleccionValue" type="number" class="form-control" style="text-align: right" min="0" value="0" autofocus />
             </div>
             <div class="col-sm-4">
-              <button type="button" class="btn btn-outline-secondary btn-sm" onclick="ReplicaCantidades()">Igualar cantidad</button>
+              <button type="button" class="btn btn-brand-primary rounded-pill btn-sm" onclick="ReplicaCantidades()">Igualar cantidad</button>
             </div>
           </div>
           <div class="row" style="padding-bottom: 5px">
@@ -121,9 +125,9 @@
             </div>
           </div>
         </div>
-        <div class="modal-footer" align="center">
-          <button id="addItemButton" type="submit" class="btn btn-primary">Agregar</button>
-          <button id="cancelButton" type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <div class="modal-footer">
+          <button id="addItemButton" type="submit" class="btn btn-brand-secondary">Agregar</button>
+          <button id="cancelButton" type="button" class="btn btn-brand-primary" data-bs-dismiss="modal">Cancelar</button>
         </div>
         <input name="__RequestVerificationToken" type="hidden" value="CfDJ8LJ1wT-wGzNCp57-0KN8nJvV9HCZwdziBwM884yDzAQQJeNW11P9F4tZeVhBLJ6RAa-UMaJmGghvwqZFf0urFKBbu0AbtLuJNUNOQDQJ_xmXWYTn4AUrJYRm5v_Fxg89ZecL3dv6qzplc2bwdnFiy7xU1DklkfR0RS6W0EItCne27eNBga1J6DHDsNcydnRNRQ" />
       </form>

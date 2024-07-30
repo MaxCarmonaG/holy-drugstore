@@ -111,6 +111,10 @@
     max-width: none;
   }
 
+  #header-nav {
+    padding: unset;
+  }
+
   #header .top-header .navbar-nav li:first-child {
     margin: 0;
   }

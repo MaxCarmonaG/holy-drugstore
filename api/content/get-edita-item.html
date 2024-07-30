@@ -1,9 +1,13 @@
 <div class="modal-dialog" role="document">
   <div>
     <div class="modal-content">
-      <div class="modal-header">
+      <div class="modal-header bg-brand-primary">
         <h5 class="modal-title">Modificar pedido</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button type="button" class="btn btn-brand-primary ms-auto rounded-3" data-bs-dismiss="modal" aria-label="Close">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" width="16" height="16">
+            <path d="M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z"></path>
+          </svg>
+        </button>
       </div>
       <form id="formEnviaItem" action="EditaItem" method="post">
         <input name="__RequestVerificationToken" type="hidden" value="CfDJ8LJ1wT-wGzNCp57-0KN8nJt2NElcsQeM7HOjZHIO_KKkTlNqZae21sNW4S_0_N7Tga_mHxLyUIQK08kxIBLmGtDIpX-wEoPo4olTOoGAHjEkvEIYQKVkIaEI5CNqvZakLcamD3ILFX9Imajvul4sTAXf6FYwngijrt1ZAVRe9fLx_UNk4KhcE7LpsNgrPV9Osg" />
@@ -48,8 +52,8 @@
           </div>
         </div>
         <div class="modal-footer text-center">
-          <button id="editItemButton" type="submit" class="btn btn-primary">Agregar</button>
-          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancelar</button>
+          <button id="editItemButton" type="submit" class="btn btn-brand-secondary">Agregar</button>
+          <button type="button" class="btn btn-brand-primary" data-bs-dismiss="modal">Cancelar</button>
         </div>
       </form>
     </div>
