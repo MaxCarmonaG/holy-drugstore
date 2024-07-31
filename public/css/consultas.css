@@ -1,0 +1,22 @@
+/* Main table styles */
+/* -------------------------------------------------- */
+.main-table {
+  box-shadow: 3px 3px 3px #00000029;
+  border: 1px solid var(--color-gray-3);
+  border-radius: 14px 14px 0 0;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  border-top: none;
+}
+
+#tablaPedidos_wrapper .dt-search,
+#tablaFacturas_wrapper .dt-search {
+  margin-right: 1rem;
+}
+
+#tablaPedidos_wrapper .dt-search input,
+#tablaFacturas_wrapper .dt-search input {
+  border-radius: 14px;
+}
+
+/* -------------------------------------------------- */

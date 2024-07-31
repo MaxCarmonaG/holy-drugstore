@@ -1,8 +1,11 @@
 :root {
   --color-brand-primary: #be0000;
+  --color-brand-primary-rgb: rgb(190, 0, 0);
   --color-brand-primary-s10: #ab0000;
   --color-brand-primary-s20: #980000;
+  --color-brand-primary-o25: rgba(var(--color-brand-primary-rgb), 0.25);
   --color-brand-secondary: #ff2828;
+  --color-brand-secondary-rgb: rgb(255, 40, 40);
   --color-brand-secondary-s10: #e62424;
   --color-brand-secondary-s20: #cc2020;
   --color-brand-dark: #0b1928;
@@ -32,6 +35,14 @@ h4,
 h5,
 h6 {
   font-weight: 700;
+}
+
+a {
+  color: var(--color-brand-secondary-rgb);
+}
+
+a:hover {
+  color: var(--color-brand-primary-rgb);
 }
 
 #header {
@@ -66,6 +77,34 @@ h6 {
   --bs-btn-active-border-color: var(--color-brand-secondary-s20);
 }
 
+.dropdown-menu {
+  --bs-dropdown-link-active-bg: var(--color-brand-primary);
+}
+
+.form-control:focus {
+  border-color: var(--bs-danger-border-subtle);
+  box-shadow: 0 0 0 0.25rem var(--color-brand-primary-o25);
+}
+
+.nav-tabs .nav-link:not(.active) {
+  border: var(--bs-nav-tabs-border-width) solid var(--color-brand-secondary);
+}
+
+.nav-tabs .nav-link:not(.active):hover {
+  color: var(--color-brand-primary);
+}
+
+.nav-tabs {
+  --bs-nav-tabs-border-color: transparent;
+  --bs-nav-tabs-link-active-bg: var(--color-brand-primary);
+  --bs-nav-tabs-link-active-color: var(--color-brand-light);
+  --bs-nav-tabs-link-active-border-color: var(--color-brand-primary);
+}
+
+.nav-link {
+  --bs-nav-link-color: var(--color-brand-secondary);
+}
+
 .dropdown-toggle::after {
   margin-left: 0.5rem;
   vertical-align: 0.1em;
@@ -89,5 +128,10 @@ h6 {
   --bs-pagination-active-bg: var(--color-brand-primary);
   --bs-pagination-active-border-color: var(--color-brand-primary);
   --bs-pagination-focus-color: var(--color-brand-primary);
-  --bs-pagination-focus-box-shadow: 0 0 0 0.25rem rgba(190, 0, 0, 0.25);
+  --bs-pagination-focus-box-shadow: 0 0 0 0.25rem var(--color-brand-primary-o25);
+}
+
+.brand-tooltip {
+  --bs-tooltip-bg: var(--color-brand-primary);
+  --bs-tooltip-color: var(--color-brand-light);
 }

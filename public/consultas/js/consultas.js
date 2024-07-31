@@ -18,8 +18,9 @@ function BuscarFacturas() {
         var tabla = $('#tablaFacturas tbody');
 
         tabla.html('');
+        ActualizarTablas().destroy();
         tabla.html(data);
-        ActualizarTablas();
+        ActualizarTablas().draw();
       }
     },
     error: function (xhr, ajaxOptions, thrownError) {
@@ -47,8 +48,9 @@ function BuscarPedidos() {
       } else {
         var tabla = $('#tablaPedidos tbody');
         tabla.html('');
+        ActualizarTablas().destroy();
         tabla.html(data);
-        ActualizarTablas();
+        ActualizarTablas().draw();
       }
     },
     error: function (xhr, ajaxOptions, thrownError) {
@@ -58,7 +60,7 @@ function BuscarPedidos() {
 }
 
 var ActualizarTablas = function () {
-  $('table.table-hover').DataTable({
+  return $('table.table-hover').DataTable({
     retrieve: true,
     language: {
       deferRender: true,

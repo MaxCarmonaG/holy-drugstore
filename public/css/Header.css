@@ -44,7 +44,7 @@
 
 #header .navbar-nav .nav-link {
   font-weight: 600;
-  padding: 30px 20px;
+  padding: 20px 30px;
   color: var(--color-brand-dark);
   transition:
     color 0.4s,
@@ -204,10 +204,6 @@
 }
 
 /* Contenido principal */
-.gap-3 {
-  gap: 16px;
-}
-
 .sm-text {
   font-size: 0.875rem;
 }
