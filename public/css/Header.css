@@ -7,7 +7,7 @@
 
 #header .navbar {
   padding: 0 20px;
-  border-bottom: 1px solid var(--color-gray-2);
+  border-bottom: 1px solid var(--color-grey-2);
 }
 
 #header .top-header .navbar-nav {
@@ -96,7 +96,7 @@
 }
 
 #header .dropdown-menu .dropdown-item:not(:last-child) {
-  border-bottom: 1px solid var(--color-gray-3);
+  border-bottom: 1px solid var(--color-grey-3);
 }
 
 #header .dropdown-menu .dropdown-item:hover {
@@ -182,7 +182,7 @@
   #header .navbar-nav .nav-link {
     font-size: 15px;
     padding: 24px 20px;
-    border-top: 1px solid var(--color-gray-2);
+    border-top: 1px solid var(--color-grey-2);
   }
 
   #header .navbar-nav .nav-link:hover {
@@ -193,7 +193,7 @@
   #header .navbar-nav .show > .nav-link {
     color: var(--color-brand-light);
     background-color: var(--color-brand-primary);
-    border-bottom: 1px solid var(--color-gray-2);
+    border-bottom: 1px solid var(--color-grey-2);
   }
 }
 

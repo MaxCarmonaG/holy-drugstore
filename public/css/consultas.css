@@ -2,7 +2,7 @@
 /* -------------------------------------------------- */
 .main-table {
   box-shadow: 3px 3px 3px #00000029;
-  border: 1px solid var(--color-gray-3);
+  border: 1px solid var(--color-grey-3);
   border-radius: 14px 14px 0 0;
   margin-bottom: 1rem;
   overflow: hidden;

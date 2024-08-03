@@ -5,6 +5,9 @@
   border: 3px solid var(--color-brand-primary);
   border-radius: 15px;
   font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
 }
 
 .cart h2 {
@@ -17,21 +20,22 @@
 .cart__sumary {
   margin-bottom: 1.5rem;
   line-height: 24px;
+  flex: 1;
 }
 
 /* Main table styles
 -------------------------------------------------- */
 .main-table {
   box-shadow: 3px 3px 3px #00000029;
-  border: 1px solid var(--color-gray-3);
+  border: 1px solid var(--color-grey-3);
   border-radius: 14px 14px 0 0;
   margin-bottom: 1rem;
 }
 
 .main-table__header {
   padding: 1rem 1rem 0 1rem;
-  background-color: var(--color-brand-primary);
-  color: var(--color-gray-4);
+  background-color: var(--color-brand-grey);
+  color: var(--color-grey-4);
   font-size: 18px;
   font-weight: 400;
   border-radius: 14px 14px 0 0;
@@ -53,7 +57,7 @@
 }
 
 .main-table__dropdown .dropdown-item:not(:last-child) {
-  border-bottom: 1px solid var(--color-gray-3);
+  border-bottom: 1px solid var(--color-grey-3);
 }
 
 .main-table__dropdown .dropdown-item:hover {

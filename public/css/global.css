@@ -3,20 +3,21 @@
   --color-brand-primary-rgb: rgb(190, 0, 0);
   --color-brand-primary-s10: #ab0000;
   --color-brand-primary-s20: #980000;
-  --color-brand-primary-o25: rgba(var(--color-brand-primary-rgb), 0.25);
+  --color-brand-primary-o25: rgba(190, 0, 0, 0.25);
   --color-brand-secondary: #ff2828;
   --color-brand-secondary-rgb: rgb(255, 40, 40);
   --color-brand-secondary-s10: #e62424;
   --color-brand-secondary-s20: #cc2020;
-  --color-brand-dark: #0b1928;
+  --color-brand-dark: #0a0a0a;
   --color-brand-light: #ffffff;
   --color-brand-light-s10: #e6e6e6;
   --color-brand-light-s20: #cccccc;
-  --color-gray-1: #b4b4b934;
-  --color-gray-2: #707070;
-  --color-gray-3: #d8d5d5;
-  --color-gray-4: #28282dba;
-  --color-gray-5: #28282d;
+  --color-brand-grey: #4c4c4c;
+  --color-grey-1: #b4b4b934;
+  --color-grey-2: #707070;
+  --color-grey-3: #d8d5d5;
+  --color-grey-4: #28282dba;
+  --color-grey-5: #28282d;
 }
 
 * {
@@ -28,6 +29,7 @@
 body {
   background-color: var(--color-brand-light);
   font-family: 'Hurme Geometric', Sans-serif;
+  --bs-body-color: var(--color-grey-5);
 }
 
 h1,
@@ -102,7 +104,7 @@ a:hover {
 }
 
 .nav-tabs .nav-link:not(.active) {
-  border: var(--bs-nav-tabs-border-width) solid var(--color-brand-secondary);
+  border: var(--bs-nav-tabs-border-width) solid var(--color-grey-2);
 }
 
 .nav-tabs .nav-link:not(.active):hover {
@@ -111,9 +113,9 @@ a:hover {
 
 .nav-tabs {
   --bs-nav-tabs-border-color: transparent;
-  --bs-nav-tabs-link-active-bg: var(--color-brand-primary);
+  --bs-nav-tabs-link-active-bg: var(--color-brand-grey);
   --bs-nav-tabs-link-active-color: var(--color-brand-light);
-  --bs-nav-tabs-link-active-border-color: var(--color-brand-primary);
+  --bs-nav-tabs-link-active-border-color: var(--color-brand-grey);
 }
 
 .nav-link {
@@ -131,6 +133,25 @@ a:hover {
 .bg-brand-primary {
   background-color: var(--color-brand-primary);
   color: var(--color-brand-light);
+}
+
+.bg-brand-grey {
+  background-color: var(--color-brand-grey);
+  color: var(--color-brand-light);
+}
+
+.bg-brand-light {
+  background-color: var(--color-brand-light);
+  color: var(--color-grey-5);
+}
+
+.bg-brand-main {
+  background: linear-gradient(180deg, rgba(40, 40, 45, 0.25) 0%, rgba(255, 255, 255, 0.75) 50%, rgba(255, 255, 255, 0.75) 100%);
+}
+
+.w-brand-card {
+  min-width: 200px;
+  max-width: 250px;
 }
 
 .text-brand-light {
