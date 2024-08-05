@@ -49,6 +49,7 @@
                 <div class="dropdown-menu" aria-labelledby="navbarConsultas">
                   <a class="dropdown-item" href="/consultas" data-bs-target="#tabPedidos">Pedidos</a>
                   <a class="dropdown-item" href="/consultas?tab=facturas" data-bs-target="#tabFacturas">Facturas</a>
+                  <a class="dropdown-item" href="/consultas/backorders">Backorders</a>
                 </div>
               </li>
               <li class="nav-item dropdown ms-lg-auto">
@@ -75,6 +76,8 @@
                   </svg>
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarUser">
+                  <a href="/centropedidos" class="dropdown-item">Centro de Pedidos</a>
+                  <a href="/clientes" class="dropdown-item">Clientes</a>
                   <a href="/usuario/cambiarclave" class="dropdown-item">Cambiar Clave</a>
                   <a href="/Identity/Account/Logout?ReturnUrl=/" class="dropdown-item">Cerrar Sesión</a>
                 </div>
@@ -166,11 +169,11 @@
                 <tbody id="tablaOrden">
                   <tr role="row" class="odd">
                     <td class="text-center">
-                      <button class="btn btn-brand-secondary rounded-3" onclick="EditaItem(1653536)" data-bs-toggle="tooltip" title="" data-bs-placement="left" data-bs-title="Editar">
+                      <button class="btn btn-brand-secondary rounded-3" onclick="EditaItem(1653536)" data-bs-toggle="tooltip" data-bs-custom-class="brand-tooltip" title="" data-bs-placement="left" data-bs-title="Editar">
                         <svg viewBox="0 0 14 16" fill="currentColor" width="14" height="16" version="1.1" class="octicon octicon-pencil"><path fill-rule="evenodd" d="M0 12v3h3l8-8-3-3-8 8zm3 2H1v-2h1v1h1v1zm10.3-9.3L12 6 9 3l1.3-1.3a.996.996 0 0 1 1.41 0l1.59 1.59c.39.39.39 1.02 0 1.41z"></path></svg>
                       </button>
                       <span data-bs-toggle="modal" data-bs-target="#modalEliminaDetalle" data-href="/pedido/eliminaitem?idItem=1653536">
-                        <a href="javascript:void(0);" class="btn btn-brand-primary rounded-3" data-bs-toggle="tooltip" title="" data-bs-placement="right" id="buttonDeleteItem" data-bs-title="Eliminar">
+                        <a href="javascript:void(0);" class="btn btn-brand-primary rounded-3" data-bs-toggle="tooltip" data-bs-custom-class="brand-tooltip" title="" data-bs-placement="right" id="buttonDeleteItem" data-bs-title="Eliminar">
                           <svg viewBox="0 0 12 16" fill="currentColor" width="12" height="16" version="1.1" class="octicon octicon-trashcan"><path fill-rule="evenodd" d="M11 2H9c0-.55-.45-1-1-1H5c-.55 0-1 .45-1 1H2c-.55 0-1 .45-1 1v1c0 .55.45 1 1 1v9c0 .55.45 1 1 1h7c.55 0 1-.45 1-1V5c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm-1 12H3V5h1v8h1V5h1v8h1V5h1v8h1V5h1v9zm1-10H2V3h9v1z"></path></svg>
                         </a>
                       </span>
@@ -187,11 +190,11 @@
                   </tr>
                   <tr role="row" class="even">
                     <td class="text-center">
-                      <button class="btn btn-brand-secondary rounded-3" onclick="EditaItem(1653537)" data-bs-toggle="tooltip" title="" data-bs-placement="left" data-bs-title="Editar">
+                      <button class="btn btn-brand-secondary rounded-3" onclick="EditaItem(1653537)" data-bs-toggle="tooltip" data-bs-custom-class="brand-tooltip" title="" data-bs-placement="left" data-bs-title="Editar">
                         <svg viewBox="0 0 14 16" fill="currentColor" width="14" height="16" version="1.1" class="octicon octicon-pencil"><path fill-rule="evenodd" d="M0 12v3h3l8-8-3-3-8 8zm3 2H1v-2h1v1h1v1zm10.3-9.3L12 6 9 3l1.3-1.3a.996.996 0 0 1 1.41 0l1.59 1.59c.39.39.39 1.02 0 1.41z"></path></svg>
                       </button>
                       <span data-bs-toggle="modal" data-bs-target="#modalEliminaDetalle" data-href="/pedido/eliminaitem?idItem=1653537">
-                        <a href="javascript:void(0);" class="btn btn-brand-primary rounded-3" data-bs-toggle="tooltip" title="" data-bs-placement="right" id="buttonDeleteItem" data-bs-title="Eliminar">
+                        <a href="javascript:void(0);" class="btn btn-brand-primary rounded-3" data-bs-toggle="tooltip" data-bs-custom-class="brand-tooltip" title="" data-bs-placement="right" id="buttonDeleteItem" data-bs-title="Eliminar">
                           <svg viewBox="0 0 12 16" fill="currentColor" width="12" height="16" version="1.1" class="octicon octicon-trashcan"><path fill-rule="evenodd" d="M11 2H9c0-.55-.45-1-1-1H5c-.55 0-1 .45-1 1H2c-.55 0-1 .45-1 1v1c0 .55.45 1 1 1v9c0 .55.45 1 1 1h7c.55 0 1-.45 1-1V5c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm-1 12H3V5h1v8h1V5h1v8h1V5h1v8h1V5h1v9zm1-10H2V3h9v1z"></path></svg>
                         </a>
                       </span>
@@ -208,11 +211,11 @@
                   </tr>
                   <tr role="row" class="odd">
                     <td class="text-center">
-                      <button class="btn btn-brand-secondary rounded-3" onclick="EditaItem(1653538)" data-bs-toggle="tooltip" title="" data-bs-placement="left" data-bs-title="Editar">
+                      <button class="btn btn-brand-secondary rounded-3" onclick="EditaItem(1653538)" data-bs-toggle="tooltip" data-bs-custom-class="brand-tooltip" title="" data-bs-placement="left" data-bs-title="Editar">
                         <svg viewBox="0 0 14 16" fill="currentColor" width="14" height="16" version="1.1" class="octicon octicon-pencil"><path fill-rule="evenodd" d="M0 12v3h3l8-8-3-3-8 8zm3 2H1v-2h1v1h1v1zm10.3-9.3L12 6 9 3l1.3-1.3a.996.996 0 0 1 1.41 0l1.59 1.59c.39.39.39 1.02 0 1.41z"></path></svg>
                       </button>
                       <span data-bs-toggle="modal" data-bs-target="#modalEliminaDetalle" data-href="/pedido/eliminaitem?idItem=1653538">
-                        <a href="javascript:void(0);" class="btn btn-brand-primary rounded-3" data-bs-toggle="tooltip" title="" data-bs-placement="right" id="buttonDeleteItem" data-bs-title="Eliminar">
+                        <a href="javascript:void(0);" class="btn btn-brand-primary rounded-3" data-bs-toggle="tooltip" data-bs-custom-class="brand-tooltip" title="" data-bs-placement="right" id="buttonDeleteItem" data-bs-title="Eliminar">
                           <svg viewBox="0 0 12 16" fill="currentColor" width="12" height="16" version="1.1" class="octicon octicon-trashcan"><path fill-rule="evenodd" d="M11 2H9c0-.55-.45-1-1-1H5c-.55 0-1 .45-1 1H2c-.55 0-1 .45-1 1v1c0 .55.45 1 1 1v9c0 .55.45 1 1 1h7c.55 0 1-.45 1-1V5c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm-1 12H3V5h1v8h1V5h1v8h1V5h1v8h1V5h1v9zm1-10H2V3h9v1z"></path></svg>
                         </a>
                       </span>
@@ -229,11 +232,11 @@
                   </tr>
                   <tr role="row" class="even">
                     <td class="text-center">
-                      <button class="btn btn-brand-secondary rounded-3" onclick="EditaItem(1653539)" data-bs-toggle="tooltip" title="" data-bs-placement="left" data-bs-title="Editar">
+                      <button class="btn btn-brand-secondary rounded-3" onclick="EditaItem(1653539)" data-bs-toggle="tooltip" data-bs-custom-class="brand-tooltip" title="" data-bs-placement="left" data-bs-title="Editar">
                         <svg viewBox="0 0 14 16" fill="currentColor" width="14" height="16" version="1.1" class="octicon octicon-pencil"><path fill-rule="evenodd" d="M0 12v3h3l8-8-3-3-8 8zm3 2H1v-2h1v1h1v1zm10.3-9.3L12 6 9 3l1.3-1.3a.996.996 0 0 1 1.41 0l1.59 1.59c.39.39.39 1.02 0 1.41z"></path></svg>
                       </button>
                       <span data-bs-toggle="modal" data-bs-target="#modalEliminaDetalle" data-href="/pedido/eliminaitem?idItem=1653539">
-                        <a href="javascript:void(0);" class="btn btn-brand-primary rounded-3" data-bs-toggle="tooltip" title="" data-bs-placement="right" id="buttonDeleteItem" data-bs-title="Eliminar">
+                        <a href="javascript:void(0);" class="btn btn-brand-primary rounded-3" data-bs-toggle="tooltip" data-bs-custom-class="brand-tooltip" title="" data-bs-placement="right" id="buttonDeleteItem" data-bs-title="Eliminar">
                           <svg viewBox="0 0 12 16" fill="currentColor" width="12" height="16" version="1.1" class="octicon octicon-trashcan"><path fill-rule="evenodd" d="M11 2H9c0-.55-.45-1-1-1H5c-.55 0-1 .45-1 1H2c-.55 0-1 .45-1 1v1c0 .55.45 1 1 1v9c0 .55.45 1 1 1h7c.55 0 1-.45 1-1V5c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm-1 12H3V5h1v8h1V5h1v8h1V5h1v8h1V5h1v9zm1-10H2V3h9v1z"></path></svg>
                         </a>
                       </span>
@@ -250,11 +253,11 @@
                   </tr>
                   <tr role="row" class="odd">
                     <td class="text-center">
-                      <button class="btn btn-brand-secondary rounded-3" onclick="EditaItem(1653540)" data-bs-toggle="tooltip" title="" data-bs-placement="left" data-bs-title="Editar">
+                      <button class="btn btn-brand-secondary rounded-3" onclick="EditaItem(1653540)" data-bs-toggle="tooltip" data-bs-custom-class="brand-tooltip" title="" data-bs-placement="left" data-bs-title="Editar">
                         <svg viewBox="0 0 14 16" fill="currentColor" width="14" height="16" version="1.1" class="octicon octicon-pencil"><path fill-rule="evenodd" d="M0 12v3h3l8-8-3-3-8 8zm3 2H1v-2h1v1h1v1zm10.3-9.3L12 6 9 3l1.3-1.3a.996.996 0 0 1 1.41 0l1.59 1.59c.39.39.39 1.02 0 1.41z"></path></svg>
                       </button>
                       <span data-bs-toggle="modal" data-bs-target="#modalEliminaDetalle" data-href="/pedido/eliminaitem?idItem=1653540">
-                        <a href="javascript:void(0);" class="btn btn-brand-primary rounded-3" data-bs-toggle="tooltip" title="" data-bs-placement="right" id="buttonDeleteItem" data-bs-title="Eliminar">
+                        <a href="javascript:void(0);" class="btn btn-brand-primary rounded-3" data-bs-toggle="tooltip" data-bs-custom-class="brand-tooltip" title="" data-bs-placement="right" id="buttonDeleteItem" data-bs-title="Eliminar">
                           <svg viewBox="0 0 12 16" fill="currentColor" width="12" height="16" version="1.1" class="octicon octicon-trashcan"><path fill-rule="evenodd" d="M11 2H9c0-.55-.45-1-1-1H5c-.55 0-1 .45-1 1H2c-.55 0-1 .45-1 1v1c0 .55.45 1 1 1v9c0 .55.45 1 1 1h7c.55 0 1-.45 1-1V5c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm-1 12H3V5h1v8h1V5h1v8h1V5h1v8h1V5h1v9zm1-10H2V3h9v1z"></path></svg>
                         </a>
                       </span>
@@ -271,11 +274,11 @@
                   </tr>
                   <tr role="row" class="even">
                     <td class="text-center">
-                      <button class="btn btn-brand-secondary rounded-3" onclick="EditaItem(1653541)" data-bs-toggle="tooltip" title="" data-bs-placement="left" data-bs-title="Editar">
+                      <button class="btn btn-brand-secondary rounded-3" onclick="EditaItem(1653541)" data-bs-toggle="tooltip" data-bs-custom-class="brand-tooltip" title="" data-bs-placement="left" data-bs-title="Editar">
                         <svg viewBox="0 0 14 16" fill="currentColor" width="14" height="16" version="1.1" class="octicon octicon-pencil"><path fill-rule="evenodd" d="M0 12v3h3l8-8-3-3-8 8zm3 2H1v-2h1v1h1v1zm10.3-9.3L12 6 9 3l1.3-1.3a.996.996 0 0 1 1.41 0l1.59 1.59c.39.39.39 1.02 0 1.41z"></path></svg>
                       </button>
                       <span data-bs-toggle="modal" data-bs-target="#modalEliminaDetalle" data-href="/pedido/eliminaitem?idItem=1653541">
-                        <a href="javascript:void(0);" class="btn btn-brand-primary rounded-3" data-bs-toggle="tooltip" title="" data-bs-placement="right" id="buttonDeleteItem" data-bs-title="Eliminar">
+                        <a href="javascript:void(0);" class="btn btn-brand-primary rounded-3" data-bs-toggle="tooltip" data-bs-custom-class="brand-tooltip" title="" data-bs-placement="right" id="buttonDeleteItem" data-bs-title="Eliminar">
                           <svg viewBox="0 0 12 16" fill="currentColor" width="12" height="16" version="1.1" class="octicon octicon-trashcan"><path fill-rule="evenodd" d="M11 2H9c0-.55-.45-1-1-1H5c-.55 0-1 .45-1 1H2c-.55 0-1 .45-1 1v1c0 .55.45 1 1 1v9c0 .55.45 1 1 1h7c.55 0 1-.45 1-1V5c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm-1 12H3V5h1v8h1V5h1v8h1V5h1v8h1V5h1v9zm1-10H2V3h9v1z"></path></svg>
                         </a>
                       </span>
@@ -292,11 +295,11 @@
                   </tr>
                   <tr role="row" class="odd">
                     <td class="text-center">
-                      <button class="btn btn-brand-secondary rounded-3" onclick="EditaItem(1653542)" data-bs-toggle="tooltip" title="" data-bs-placement="left" data-bs-title="Editar">
+                      <button class="btn btn-brand-secondary rounded-3" onclick="EditaItem(1653542)" data-bs-toggle="tooltip" data-bs-custom-class="brand-tooltip" title="" data-bs-placement="left" data-bs-title="Editar">
                         <svg viewBox="0 0 14 16" fill="currentColor" width="14" height="16" version="1.1" class="octicon octicon-pencil"><path fill-rule="evenodd" d="M0 12v3h3l8-8-3-3-8 8zm3 2H1v-2h1v1h1v1zm10.3-9.3L12 6 9 3l1.3-1.3a.996.996 0 0 1 1.41 0l1.59 1.59c.39.39.39 1.02 0 1.41z"></path></svg>
                       </button>
                       <span data-bs-toggle="modal" data-bs-target="#modalEliminaDetalle" data-href="/pedido/eliminaitem?idItem=1653542">
-                        <a href="javascript:void(0);" class="btn btn-brand-primary rounded-3" data-bs-toggle="tooltip" title="" data-bs-placement="right" id="buttonDeleteItem" data-bs-title="Eliminar">
+                        <a href="javascript:void(0);" class="btn btn-brand-primary rounded-3" data-bs-toggle="tooltip" data-bs-custom-class="brand-tooltip" title="" data-bs-placement="right" id="buttonDeleteItem" data-bs-title="Eliminar">
                           <svg viewBox="0 0 12 16" fill="currentColor" width="12" height="16" version="1.1" class="octicon octicon-trashcan"><path fill-rule="evenodd" d="M11 2H9c0-.55-.45-1-1-1H5c-.55 0-1 .45-1 1H2c-.55 0-1 .45-1 1v1c0 .55.45 1 1 1v9c0 .55.45 1 1 1h7c.55 0 1-.45 1-1V5c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm-1 12H3V5h1v8h1V5h1v8h1V5h1v8h1V5h1v9zm1-10H2V3h9v1z"></path></svg>
                         </a>
                       </span>
@@ -313,11 +316,11 @@
                   </tr>
                   <tr role="row" class="even">
                     <td class="text-center">
-                      <button class="btn btn-brand-secondary rounded-3" onclick="EditaItem(1653537)" data-bs-toggle="tooltip" title="" data-bs-placement="left" data-bs-title="Editar">
+                      <button class="btn btn-brand-secondary rounded-3" onclick="EditaItem(1653537)" data-bs-toggle="tooltip" data-bs-custom-class="brand-tooltip" title="" data-bs-placement="left" data-bs-title="Editar">
                         <svg viewBox="0 0 14 16" fill="currentColor" width="14" height="16" version="1.1" class="octicon octicon-pencil"><path fill-rule="evenodd" d="M0 12v3h3l8-8-3-3-8 8zm3 2H1v-2h1v1h1v1zm10.3-9.3L12 6 9 3l1.3-1.3a.996.996 0 0 1 1.41 0l1.59 1.59c.39.39.39 1.02 0 1.41z"></path></svg>
                       </button>
                       <span data-bs-toggle="modal" data-bs-target="#modalEliminaDetalle" data-href="/pedido/eliminaitem?idItem=1653537">
-                        <a href="javascript:void(0);" class="btn btn-brand-primary rounded-3" data-bs-toggle="tooltip" title="" data-bs-placement="right" id="buttonDeleteItem" data-bs-title="Eliminar">
+                        <a href="javascript:void(0);" class="btn btn-brand-primary rounded-3" data-bs-toggle="tooltip" data-bs-custom-class="brand-tooltip" title="" data-bs-placement="right" id="buttonDeleteItem" data-bs-title="Eliminar">
                           <svg viewBox="0 0 12 16" fill="currentColor" width="12" height="16" version="1.1" class="octicon octicon-trashcan"><path fill-rule="evenodd" d="M11 2H9c0-.55-.45-1-1-1H5c-.55 0-1 .45-1 1H2c-.55 0-1 .45-1 1v1c0 .55.45 1 1 1v9c0 .55.45 1 1 1h7c.55 0 1-.45 1-1V5c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm-1 12H3V5h1v8h1V5h1v8h1V5h1v8h1V5h1v9zm1-10H2V3h9v1z"></path></svg>
                         </a>
                       </span>
@@ -334,11 +337,11 @@
                   </tr>
                   <tr role="row" class="odd">
                     <td class="text-center">
-                      <button class="btn btn-brand-secondary rounded-3" onclick="EditaItem(1653536)" data-bs-toggle="tooltip" title="" data-bs-placement="left" data-bs-title="Editar">
+                      <button class="btn btn-brand-secondary rounded-3" onclick="EditaItem(1653536)" data-bs-toggle="tooltip" data-bs-custom-class="brand-tooltip" title="" data-bs-placement="left" data-bs-title="Editar">
                         <svg viewBox="0 0 14 16" fill="currentColor" width="14" height="16" version="1.1" class="octicon octicon-pencil"><path fill-rule="evenodd" d="M0 12v3h3l8-8-3-3-8 8zm3 2H1v-2h1v1h1v1zm10.3-9.3L12 6 9 3l1.3-1.3a.996.996 0 0 1 1.41 0l1.59 1.59c.39.39.39 1.02 0 1.41z"></path></svg>
                       </button>
                       <span data-bs-toggle="modal" data-bs-target="#modalEliminaDetalle" data-href="/pedido/eliminaitem?idItem=1653536">
-                        <a href="javascript:void(0);" class="btn btn-brand-primary rounded-3" data-bs-toggle="tooltip" title="" data-bs-placement="right" id="buttonDeleteItem" data-bs-title="Eliminar">
+                        <a href="javascript:void(0);" class="btn btn-brand-primary rounded-3" data-bs-toggle="tooltip" data-bs-custom-class="brand-tooltip" title="" data-bs-placement="right" id="buttonDeleteItem" data-bs-title="Eliminar">
                           <svg viewBox="0 0 12 16" fill="currentColor" width="12" height="16" version="1.1" class="octicon octicon-trashcan"><path fill-rule="evenodd" d="M11 2H9c0-.55-.45-1-1-1H5c-.55 0-1 .45-1 1H2c-.55 0-1 .45-1 1v1c0 .55.45 1 1 1v9c0 .55.45 1 1 1h7c.55 0 1-.45 1-1V5c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm-1 12H3V5h1v8h1V5h1v8h1V5h1v8h1V5h1v9zm1-10H2V3h9v1z"></path></svg>
                         </a>
                       </span>
@@ -355,11 +358,11 @@
                   </tr>
                   <tr role="row" class="even">
                     <td class="text-center">
-                      <button class="btn btn-brand-secondary rounded-3" onclick="EditaItem(1653537)" data-bs-toggle="tooltip" title="" data-bs-placement="left" data-bs-title="Editar">
+                      <button class="btn btn-brand-secondary rounded-3" onclick="EditaItem(1653537)" data-bs-toggle="tooltip" data-bs-custom-class="brand-tooltip" title="" data-bs-placement="left" data-bs-title="Editar">
                         <svg viewBox="0 0 14 16" fill="currentColor" width="14" height="16" version="1.1" class="octicon octicon-pencil"><path fill-rule="evenodd" d="M0 12v3h3l8-8-3-3-8 8zm3 2H1v-2h1v1h1v1zm10.3-9.3L12 6 9 3l1.3-1.3a.996.996 0 0 1 1.41 0l1.59 1.59c.39.39.39 1.02 0 1.41z"></path></svg>
                       </button>
                       <span data-bs-toggle="modal" data-bs-target="#modalEliminaDetalle" data-href="/pedido/eliminaitem?idItem=1653537">
-                        <a href="javascript:void(0);" class="btn btn-brand-primary rounded-3" data-bs-toggle="tooltip" title="" data-bs-placement="right" id="buttonDeleteItem" data-bs-title="Eliminar">
+                        <a href="javascript:void(0);" class="btn btn-brand-primary rounded-3" data-bs-toggle="tooltip" data-bs-custom-class="brand-tooltip" title="" data-bs-placement="right" id="buttonDeleteItem" data-bs-title="Eliminar">
                           <svg viewBox="0 0 12 16" fill="currentColor" width="12" height="16" version="1.1" class="octicon octicon-trashcan"><path fill-rule="evenodd" d="M11 2H9c0-.55-.45-1-1-1H5c-.55 0-1 .45-1 1H2c-.55 0-1 .45-1 1v1c0 .55.45 1 1 1v9c0 .55.45 1 1 1h7c.55 0 1-.45 1-1V5c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm-1 12H3V5h1v8h1V5h1v8h1V5h1v8h1V5h1v9zm1-10H2V3h9v1z"></path></svg>
                         </a>
                       </span>
@@ -376,11 +379,11 @@
                   </tr>
                   <tr role="row" class="odd">
                     <td class="text-center">
-                      <button class="btn btn-brand-secondary rounded-3" onclick="EditaItem(1653536)" data-bs-toggle="tooltip" title="" data-bs-placement="left" data-bs-title="Editar">
+                      <button class="btn btn-brand-secondary rounded-3" onclick="EditaItem(1653536)" data-bs-toggle="tooltip" data-bs-custom-class="brand-tooltip" title="" data-bs-placement="left" data-bs-title="Editar">
                         <svg viewBox="0 0 14 16" fill="currentColor" width="14" height="16" version="1.1" class="octicon octicon-pencil"><path fill-rule="evenodd" d="M0 12v3h3l8-8-3-3-8 8zm3 2H1v-2h1v1h1v1zm10.3-9.3L12 6 9 3l1.3-1.3a.996.996 0 0 1 1.41 0l1.59 1.59c.39.39.39 1.02 0 1.41z"></path></svg>
                       </button>
                       <span data-bs-toggle="modal" data-bs-target="#modalEliminaDetalle" data-href="/pedido/eliminaitem?idItem=1653536">
-                        <a href="javascript:void(0);" class="btn btn-brand-primary rounded-3" data-bs-toggle="tooltip" title="" data-bs-placement="right" id="buttonDeleteItem" data-bs-title="Eliminar">
+                        <a href="javascript:void(0);" class="btn btn-brand-primary rounded-3" data-bs-toggle="tooltip" data-bs-custom-class="brand-tooltip" title="" data-bs-placement="right" id="buttonDeleteItem" data-bs-title="Eliminar">
                           <svg viewBox="0 0 12 16" fill="currentColor" width="12" height="16" version="1.1" class="octicon octicon-trashcan"><path fill-rule="evenodd" d="M11 2H9c0-.55-.45-1-1-1H5c-.55 0-1 .45-1 1H2c-.55 0-1 .45-1 1v1c0 .55.45 1 1 1v9c0 .55.45 1 1 1h7c.55 0 1-.45 1-1V5c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm-1 12H3V5h1v8h1V5h1v8h1V5h1v8h1V5h1v9zm1-10H2V3h9v1z"></path></svg>
                         </a>
                       </span>
@@ -397,11 +400,11 @@
                   </tr>
                   <tr role="row" class="even">
                     <td class="text-center">
-                      <button class="btn btn-brand-secondary rounded-3" onclick="EditaItem(1653537)" data-bs-toggle="tooltip" title="" data-bs-placement="left" data-bs-title="Editar">
+                      <button class="btn btn-brand-secondary rounded-3" onclick="EditaItem(1653537)" data-bs-toggle="tooltip" data-bs-custom-class="brand-tooltip" title="" data-bs-placement="left" data-bs-title="Editar">
                         <svg viewBox="0 0 14 16" fill="currentColor" width="14" height="16" version="1.1" class="octicon octicon-pencil"><path fill-rule="evenodd" d="M0 12v3h3l8-8-3-3-8 8zm3 2H1v-2h1v1h1v1zm10.3-9.3L12 6 9 3l1.3-1.3a.996.996 0 0 1 1.41 0l1.59 1.59c.39.39.39 1.02 0 1.41z"></path></svg>
                       </button>
                       <span data-bs-toggle="modal" data-bs-target="#modalEliminaDetalle" data-href="/pedido/eliminaitem?idItem=1653537">
-                        <a href="javascript:void(0);" class="btn btn-brand-primary rounded-3" data-bs-toggle="tooltip" title="" data-bs-placement="right" id="buttonDeleteItem" data-bs-title="Eliminar">
+                        <a href="javascript:void(0);" class="btn btn-brand-primary rounded-3" data-bs-toggle="tooltip" data-bs-custom-class="brand-tooltip" title="" data-bs-placement="right" id="buttonDeleteItem" data-bs-title="Eliminar">
                           <svg viewBox="0 0 12 16" fill="currentColor" width="12" height="16" version="1.1" class="octicon octicon-trashcan"><path fill-rule="evenodd" d="M11 2H9c0-.55-.45-1-1-1H5c-.55 0-1 .45-1 1H2c-.55 0-1 .45-1 1v1c0 .55.45 1 1 1v9c0 .55.45 1 1 1h7c.55 0 1-.45 1-1V5c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm-1 12H3V5h1v8h1V5h1v8h1V5h1v8h1V5h1v9zm1-10H2V3h9v1z"></path></svg>
                         </a>
                       </span>
@@ -418,11 +421,11 @@
                   </tr>
                   <tr role="row" class="odd">
                     <td class="text-center">
-                      <button class="btn btn-brand-secondary rounded-3" onclick="EditaItem(1653536)" data-bs-toggle="tooltip" title="" data-bs-placement="left" data-bs-title="Editar">
+                      <button class="btn btn-brand-secondary rounded-3" onclick="EditaItem(1653536)" data-bs-toggle="tooltip" data-bs-custom-class="brand-tooltip" title="" data-bs-placement="left" data-bs-title="Editar">
                         <svg viewBox="0 0 14 16" fill="currentColor" width="14" height="16" version="1.1" class="octicon octicon-pencil"><path fill-rule="evenodd" d="M0 12v3h3l8-8-3-3-8 8zm3 2H1v-2h1v1h1v1zm10.3-9.3L12 6 9 3l1.3-1.3a.996.996 0 0 1 1.41 0l1.59 1.59c.39.39.39 1.02 0 1.41z"></path></svg>
                       </button>
                       <span data-bs-toggle="modal" data-bs-target="#modalEliminaDetalle" data-href="/pedido/eliminaitem?idItem=1653536">
-                        <a href="javascript:void(0);" class="btn btn-brand-primary rounded-3" data-bs-toggle="tooltip" title="" data-bs-placement="right" id="buttonDeleteItem" data-bs-title="Eliminar">
+                        <a href="javascript:void(0);" class="btn btn-brand-primary rounded-3" data-bs-toggle="tooltip" data-bs-custom-class="brand-tooltip" title="" data-bs-placement="right" id="buttonDeleteItem" data-bs-title="Eliminar">
                           <svg viewBox="0 0 12 16" fill="currentColor" width="12" height="16" version="1.1" class="octicon octicon-trashcan"><path fill-rule="evenodd" d="M11 2H9c0-.55-.45-1-1-1H5c-.55 0-1 .45-1 1H2c-.55 0-1 .45-1 1v1c0 .55.45 1 1 1v9c0 .55.45 1 1 1h7c.55 0 1-.45 1-1V5c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm-1 12H3V5h1v8h1V5h1v8h1V5h1v8h1V5h1v9zm1-10H2V3h9v1z"></path></svg>
                         </a>
                       </span>

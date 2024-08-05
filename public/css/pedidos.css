@@ -116,10 +116,6 @@
   align-items: center;
 }
 
-#tablaLaboratorios_wrapper .dt-search input {
-  border-radius: 14px;
-}
-
 #tablaBusquedaLaboratorio td {
   padding: 1rem 0.5rem;
 }
@@ -178,10 +174,6 @@
   display: grid;
   grid-template-columns: auto 1fr;
   align-items: center;
-}
-
-#tablaLaboratorios_wrapper .dt-search input {
-  border-radius: 14px;
 }
 
 div:has(> #tablaLaboratorios_filter) {

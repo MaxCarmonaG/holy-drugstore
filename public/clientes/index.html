@@ -1,0 +1,244 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cliente - Droguería Santo Remedio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <link href="https://cdn.datatables.net/v/bs5/dt-2.1.2/b-3.1.0/kt-2.12.1/r-3.0.2/datatables.min.css" rel="stylesheet" />
+
+    <link rel="shortcut icon" href="/img/brand-icon.svg" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="/css/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="/css/global.css" />
+    <link rel="stylesheet" type="text/css" href="/css/site.css" />
+    <link rel="stylesheet" type="text/css" href="/css/Header.css" />
+    <link rel="stylesheet" type="text/css" href="/css/clientes.css" />
+  </head>
+  <body>
+    <header id="header">
+      <nav class="navbar navbar-expand-lg mb-3">
+        <div class="container lg-fluid g-0">
+          <div class="container d-flex d-lg-none">
+            <button class="navbar-toggler collapsed ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#header-nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <svg xmlns="http://www.w3.org/2000/svg" class="fa-bars" height="25" width="21.88" viewBox="0 0 448 512">
+                <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                <path fill="currentColor" d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" class="fa-xmark" height="25" width="18.25" viewBox="0 0 384 512">
+                <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                <path fill="currentColor" d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
+              </svg>
+            </button>
+          </div>
+          <div class="container-lg collapse navbar-collapse" id="header-nav">
+            <ul class="navbar-nav d-flex w-100">
+              <li class="nav-item">
+                <a class="nav-link" href="/">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/pedido">Pedidos</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle d-flex align-items-center" id="navbarConsultas" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <span class="d-inline-block text-truncate" style="max-width: 260px"> Consultas </span>
+                  <svg xmlns="http://www.w3.org/2000/svg" height="17" width="10.63" viewBox="0 0 320 512">
+                    <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                    <path fill="currentColor" d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z" />
+                  </svg>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarConsultas">
+                  <a class="dropdown-item" href="/consultas" data-bs-target="#tabPedidos">Pedidos</a>
+                  <a class="dropdown-item" href="/consultas?tab=facturas" data-bs-target="#tabFacturas">Facturas</a>
+                  <a class="dropdown-item" href="/consultas/backorders">Backorders</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown ms-lg-auto">
+                <button class="d-none d-lg-flex gap-2 align-items-center dropdown-toggle btn btn-brand-secondary rounded-pill lh-lg" id="navbarUser" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <svg xmlns="http://www.w3.org/2000/svg" height="17" width="17" viewBox="0 0 512 512">
+                    <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                    <path fill="currentColor" d="M406.5 399.6C387.4 352.9 341.5 320 288 320H224c-53.5 0-99.4 32.9-118.5 79.6C69.9 362.2 48 311.7 48 256C48 141.1 141.1 48 256 48s208 93.1 208 208c0 55.7-21.9 106.2-57.5 143.6zm-40.1 32.7C334.4 452.4 296.6 464 256 464s-78.4-11.6-110.5-31.7c7.3-36.7 39.7-64.3 78.5-64.3h64c38.8 0 71.2 27.6 78.5 64.3zM256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm0-272a40 40 0 1 1 0-80 40 40 0 1 1 0 80zm-88-40a88 88 0 1 0 176 0 88 88 0 1 0 -176 0z" />
+                  </svg>
+                  <span class="d-inline-block text-truncate" style="max-width: 260px">cliente@prueba.com</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" height="17" width="10.63" viewBox="0 0 320 512">
+                    <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                    <path fill="currentColor" d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z" />
+                  </svg>
+                </button>
+                <a href="#" class="d-lg-none nav-link dropdown-toggle d-flex align-items-center" id="navbarUser" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <svg xmlns="http://www.w3.org/2000/svg" height="17" width="17" viewBox="0 0 512 512">
+                    <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                    <path fill="currentColor" d="M406.5 399.6C387.4 352.9 341.5 320 288 320H224c-53.5 0-99.4 32.9-118.5 79.6C69.9 362.2 48 311.7 48 256C48 141.1 141.1 48 256 48s208 93.1 208 208c0 55.7-21.9 106.2-57.5 143.6zm-40.1 32.7C334.4 452.4 296.6 464 256 464s-78.4-11.6-110.5-31.7c7.3-36.7 39.7-64.3 78.5-64.3h64c38.8 0 71.2 27.6 78.5 64.3zM256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm0-272a40 40 0 1 1 0-80 40 40 0 1 1 0 80zm-88-40a88 88 0 1 0 176 0 88 88 0 1 0 -176 0z" />
+                  </svg>
+                  <span class="d-inline-block text-truncate" style="max-width: 260px"> cliente@prueba.com </span>
+                  <svg xmlns="http://www.w3.org/2000/svg" height="17" width="10.63" viewBox="0 0 320 512">
+                    <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                    <path fill="currentColor" d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z" />
+                  </svg>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarUser">
+                  <a href="/centropedidos" class="dropdown-item">Centro de Pedidos</a>
+                  <a href="/clientes" class="dropdown-item">Clientes</a>
+                  <a href="/usuario/cambiarclave" class="dropdown-item">Cambiar Clave</a>
+                  <a href="/Identity/Account/Logout?ReturnUrl=/" class="dropdown-item">Cerrar Sesión</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="etiqueta-entorno">
+          <span>Entorno de pruebas</span>
+        </div>
+      </nav>
+      <div class="container">
+        <a href="https://www.drogueriasantoremedio.com" class="navbar-brand">
+          <img width="222" src="/img/SR-logo-dark.png" class="attachment-medium size-medium" alt="" loading="lazy" sizes="(max-width: 300px) 100vw, 300px" />
+        </a>
+      </div>
+    </header>
+    <main role="main" class="container pb-3">
+      <div class="main-table pb-2">
+        <div class="bg-brand-grey p-3">
+          <h4 class="mb-1">Listado clientes</h4>
+        </div>
+        <table id="tablaClientes" class="table table-hover table-striped" width="100%">
+          <thead>
+            <tr>
+              <th class="text-center" width="10%">Opciones</th>
+              <th width="25%">R.I.F.</th>
+              <th width="65%">Descripción</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="text-center">
+                <a href="/cliente" class="btn btn-brand-primary" data-bs-toggle="tooltip" data-bs-custom-class="brand-tooltip" title="Ver" data-bs-placement="right">
+                  <svg viewBox="0 0 14 16" width="14" height="16" version="1.1" class="octicon octicon-info" fill="currentColor"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z" /></svg>
+                </a>
+              </td>
+              <td>J-50038037-2</td>
+              <td>Expendio De Medicina Salud A Tu Alcance, C. A</td>
+            </tr>
+            <tr>
+              <td class="text-center">
+                <a href="/cliente" class="btn btn-brand-primary" data-bs-toggle="tooltip" data-bs-custom-class="brand-tooltip" title="Ver" data-bs-placement="right">
+                  <svg viewBox="0 0 14 16" width="14" height="16" version="1.1" class="octicon octicon-info" fill="currentColor"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z" /></svg>
+                </a>
+              </td>
+              <td>J-50490160-1</td>
+              <td>Expendio De Medicina Vita Salud, C. A</td>
+            </tr>
+            <tr>
+              <td class="text-center">
+                <a href="/cliente" class="btn btn-brand-primary" data-bs-toggle="tooltip" data-bs-custom-class="brand-tooltip" title="Ver" data-bs-placement="right">
+                  <svg viewBox="0 0 14 16" width="14" height="16" version="1.1" class="octicon octicon-info" fill="currentColor"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z" /></svg>
+                </a>
+              </td>
+              <td>J-41180321-9</td>
+              <td>Farmacia Farmarket Prados Del Este C. A</td>
+            </tr>
+            <tr>
+              <td class="text-center">
+                <a href="/cliente" class="btn btn-brand-primary" data-bs-toggle="tooltip" data-bs-custom-class="brand-tooltip" title="Ver" data-bs-placement="right">
+                  <svg viewBox="0 0 14 16" width="14" height="16" version="1.1" class="octicon octicon-info" fill="currentColor"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z" /></svg>
+                </a>
+              </td>
+              <td>J-50338081-0</td>
+              <td>Farmacia La Fuente De Pavia C. A</td>
+            </tr>
+            <tr>
+              <td class="text-center">
+                <a href="/cliente" class="btn btn-brand-primary" data-bs-toggle="tooltip" data-bs-custom-class="brand-tooltip" title="Ver" data-bs-placement="right">
+                  <svg viewBox="0 0 14 16" width="14" height="16" version="1.1" class="octicon octicon-info" fill="currentColor"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z" /></svg>
+                </a>
+              </td>
+              <td>J-50171383-9</td>
+              <td>Farmacia Mesvol, C. A</td>
+            </tr>
+            <tr>
+              <td class="text-center">
+                <a href="/cliente" class="btn btn-brand-primary" data-bs-toggle="tooltip" data-bs-custom-class="brand-tooltip" title="Ver" data-bs-placement="right">
+                  <svg viewBox="0 0 14 16" width="14" height="16" version="1.1" class="octicon octicon-info" fill="currentColor"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z" /></svg>
+                </a>
+              </td>
+              <td>J-50099819-8</td>
+              <td>Farmacia Mis Dos J 2021, C. A</td>
+            </tr>
+            <tr>
+              <td class="text-center">
+                <a href="/cliente" class="btn btn-brand-primary" data-bs-toggle="tooltip" data-bs-custom-class="brand-tooltip" title="Ver" data-bs-placement="right">
+                  <svg viewBox="0 0 14 16" width="14" height="16" version="1.1" class="octicon octicon-info" fill="currentColor"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z" /></svg>
+                </a>
+              </td>
+              <td>J-08034485-5</td>
+              <td>Farmacia Piscis C. A</td>
+            </tr>
+            <tr>
+              <td class="text-center">
+                <a href="/cliente" class="btn btn-brand-primary" data-bs-toggle="tooltip" data-bs-custom-class="brand-tooltip" title="Ver" data-bs-placement="right">
+                  <svg viewBox="0 0 14 16" width="14" height="16" version="1.1" class="octicon octicon-info" fill="currentColor"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z" /></svg>
+                </a>
+              </td>
+              <td>J-50098727-7</td>
+              <td>Farmacia Saludable Guanare C. A</td>
+            </tr>
+            <tr>
+              <td class="text-center">
+                <a href="/cliente" class="btn btn-brand-primary" data-bs-toggle="tooltip" data-bs-custom-class="brand-tooltip" title="Ver" data-bs-placement="right">
+                  <svg viewBox="0 0 14 16" width="14" height="16" version="1.1" class="octicon octicon-info" fill="currentColor"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z" /></svg>
+                </a>
+              </td>
+              <td>J-40655740-4</td>
+              <td>Farmacia Saludable, C. A</td>
+            </tr>
+            <tr>
+              <td class="text-center">
+                <a href="/cliente" class="btn btn-brand-primary" data-bs-toggle="tooltip" data-bs-custom-class="brand-tooltip" title="Ver" data-bs-placement="right">
+                  <svg viewBox="0 0 14 16" width="14" height="16" version="1.1" class="octicon octicon-info" fill="currentColor"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z" /></svg>
+                </a>
+              </td>
+              <td>J-30927929-7</td>
+              <td>Farmacias Nuevo Siglo, C. A.</td>
+            </tr>
+            <tr>
+              <td class="text-center">
+                <a href="/cliente" class="btn btn-brand-primary" data-bs-toggle="tooltip" data-bs-custom-class="brand-tooltip" title="Ver" data-bs-placement="right">
+                  <svg viewBox="0 0 14 16" width="14" height="16" version="1.1" class="octicon octicon-info" fill="currentColor"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z" /></svg>
+                </a>
+              </td>
+              <td>J-12100003</td>
+              <td>Grupo La Redoma</td>
+            </tr>
+            <tr>
+              <td class="text-center">
+                <a href="/cliente" class="btn btn-brand-primary" data-bs-toggle="tooltip" data-bs-custom-class="brand-tooltip" title="Ver" data-bs-placement="right">
+                  <svg viewBox="0 0 14 16" width="14" height="16" version="1.1" class="octicon octicon-info" fill="currentColor"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z" /></svg>
+                </a>
+              </td>
+              <td>J-40144928-0</td>
+              <td>Inversiones La Maxima 3000, C. A</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+    <footer class="footer text-light">
+      <div class="container d-flex justify-content-between align-items-center flex-wrap gap-3 py-5">
+        <img src="/img/SR-logo-light.png" alt="Santo Remedio Logo" width="178" />
+        <span class="fs-4 fst-italic">Comprometidos con tu farmacia.</span>
+        <div class="d-flex flex-column row-gap-3 text-xl-end">
+          <a href="https://www.drogueriasantoremedio.com/contacto" target="_blank">Para soporte hacer click aquí</a>
+          <span>C 2019-2024 Droguería Santo Remedio, C.A. [1.3.0]</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.datatables.net/v/bs5/dt-2.1.2/b-3.1.0/kt-2.12.1/r-3.0.2/datatables.min.js"></script>
+
+    <script src="./js/clientes.js"></script>
+  </body>
+</html>

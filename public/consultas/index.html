@@ -50,6 +50,7 @@
                 <div class="dropdown-menu" aria-labelledby="navbarConsultas">
                   <a class="dropdown-item" href="/consultas" data-bs-target="#tabPedidos">Pedidos</a>
                   <a class="dropdown-item" href="/consultas?tab=facturas" data-bs-target="#tabFacturas">Facturas</a>
+                  <a class="dropdown-item" href="/consultas/backorders">Backorders</a>
                 </div>
               </li>
               <li class="nav-item dropdown ms-lg-auto">
@@ -76,6 +77,8 @@
                   </svg>
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarUser">
+                  <a href="/centropedidos" class="dropdown-item">Centro de Pedidos</a>
+                  <a href="/clientes" class="dropdown-item">Clientes</a>
                   <a href="/usuario/cambiarclave" class="dropdown-item">Cambiar Clave</a>
                   <a href="/Identity/Account/Logout?ReturnUrl=/" class="dropdown-item">Cerrar Sesión</a>
                 </div>
@@ -108,19 +111,19 @@
 
         <div class="tab-content main-table">
           <div class="tab-pane fade" role="tabpanel" id="tabPedidos">
-            <div class="bg-brand-grey d-flex justify-content-between align-items-center p-3 gap-2 filtros">
-              <div class="d-flex gap-3 fechas">
-                <label class="form-label">
+            <div class="bg-brand-grey d-flex flex-column p-3 row-gap-3 flex-sm-row align-items-sm-center justify-content-sm-between">
+              <div class="d-flex flex-column row-gap-3 column-gap-4 flex-md-row">
+                <label class="d-flex align-items-center column-gap-2">
                   <span>Desde: </span>
                   <input type="date" id="desdePedido" class="text-center form-control rounded-pill" value="2024-07-09" />
                 </label>
-                <label class="form-label">
+                <label class="d-flex align-items-center column-gap-2">
                   <span>Hasta: </span>
                   <input type="date" id="hastaPedido" class="text-center form-control rounded-pill" value="2024-07-09" />
                 </label>
               </div>
 
-              <button type="button" class="btn btn-brand-light px-3 rounded-pill ms-auto" onclick="BuscarPedidos()">
+              <button type="button" class="btn btn-brand-light px-3 rounded-pill" onclick="BuscarPedidos()">
                 <span>Buscar</span>
                 <svg viewBox="0 0 16 16" width="16" height="16" version="1.1" class="octicon octicon-search" fill="currentColor"><path stroke="currentColor" stroke-width="1" fill-rule="evenodd" d="M15.7 13.3l-3.81-3.83A5.93 5.93 0 0 0 13 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 0 0 0-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z"></path></svg>
               </button>
@@ -141,19 +144,20 @@
           </div>
 
           <div class="tab-pane fade" role="tabpanel" id="tabFacturas">
-            <div class="bg-brand-grey d-flex justify-content-between align-items-center p-3 gap-2 filtros">
-              <div class="d-flex gap-3 fechas">
-                <label class="form-label">
+            <div class="bg-brand-grey d-flex flex-column p-3 row-gap-3 flex-sm-row align-items-sm-center justify-content-sm-between">
+              <div class="d-flex flex-column row-gap-3 column-gap-4 flex-lg-row">
+                <label class="d-flex align-items-center column-gap-2">
                   <span>Desde: </span>
                   <input type="date" id="desdeFactura" class="text-center form-control rounded-pill" value="2024-07-09" />
                 </label>
-                <label class="form-label">
+                <label class="d-flex align-items-center column-gap-2">
                   <span>Hasta: </span>
                   <input type="date" id="hastaFactura" class="text-center form-control rounded-pill" value="2024-07-09" />
                 </label>
               </div>
-              <div class="d-flex gap-3 options-group">
-                <button type="button" class="btn btn-brand-light px-3 rounded-pill ms-auto" onclick="BuscarFacturas()">
+
+              <div class="d-flex justify-content-between gap-3">
+                <button type="button" class="btn btn-brand-light px-3 rounded-pill" onclick="BuscarFacturas()">
                   <span>Buscar</span>
                   <svg viewBox="0 0 16 16" width="16" height="16" version="1.1" class="octicon octicon-search" fill="currentColor"><path stroke="currentColor" stroke-width="1" fill-rule="evenodd" d="M15.7 13.3l-3.81-3.83A5.93 5.93 0 0 0 13 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 0 0 0-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z"></path></svg>
                 </button>

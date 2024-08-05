@@ -136,11 +136,13 @@ $(document).ready(function () {
 
   $('[aria-labelledby="navbarConsultas"] a').each(function () {
     const $link = $(this);
-    $link.on('click', function (e) {
-      e.preventDefault();
-      validateActiveTab($link.attr('href'));
-      $.fn.dataTable.tables({ visible: true, api: true }).columns.adjust();
-    });
+    if ($link.attr('data-bs-target')) {
+      $link.on('click', function (e) {
+        e.preventDefault();
+        validateActiveTab($link.attr('href'));
+        $.fn.dataTable.tables({ visible: true, api: true }).columns.adjust();
+      });
+    }
   });
 
   ActualizarTablas();

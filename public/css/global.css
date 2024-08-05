@@ -171,3 +171,7 @@ a:hover {
   --bs-tooltip-bg: var(--color-brand-primary);
   --bs-tooltip-color: var(--color-brand-light);
 }
+
+.dt-search input {
+  border-radius: 14px;
+}

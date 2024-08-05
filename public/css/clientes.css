@@ -1,0 +1,13 @@
+.main-table {
+  box-shadow: 3px 3px 3px #00000029;
+  border: 1px solid var(--color-grey-3);
+  border-radius: 14px 14px 0 0;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  padding-bottom: 0.5rem;
+}
+
+#tablaClientes_wrapper .dt-search,
+#tablaClientes_wrapper .dt-paging {
+  margin-right: 1rem;
+}

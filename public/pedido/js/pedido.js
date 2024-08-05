@@ -174,7 +174,7 @@ var CargaLaboratorio = function (id) {
         updateTable().destroy();
         tabla.html(data);
         updateTable().draw();
-        $('[data-toggle="tooltip"]').tooltip();
+        $('[data-bs-toggle="tooltip"]').tooltip();
         $('#modalLaboratorio').modal('hide');
       }
     },

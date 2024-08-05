@@ -19,4 +19,8 @@
   border-radius: 14px;
 }
 
+ul.nav-tabs[role='tablist'] {
+  border-bottom: unset;
+}
+
 /* -------------------------------------------------- */
