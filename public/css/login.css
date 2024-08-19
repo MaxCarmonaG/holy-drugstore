@@ -21,8 +21,8 @@
 }
 
 .login-main {
-  display: grid;
-  place-items: center;
+  display: flex;
+  align-items: center;
   background: linear-gradient(0deg, rgba(40, 40, 45, 0.25) 0%, rgba(255, 255, 255, 0.75) 50%, rgba(255, 255, 255, 0.75) 100%);
 }
 
