@@ -1,99 +1,3 @@
-// filtro de laboratorios
-if (document.getElementById('filtroLaboratorio')) {
-  const selectOpts = { language: 'es', theme: 'bootstrap-5', placeholder: 'Filtrar por laboratorio' };
-  $('#filtroLaboratorio').select2(selectOpts);
-  if (document.getElementById('facturaLaboratorio')) {
-    $('#facturaLaboratorio').select2(selectOpts);
-  }
-  if (document.getElementById('facturaUsuario')) {
-    $('#facturaUsuario').select2(selectOpts);
-  }
-}
-
-// Inicializa datatable
-$('#modalCrearOrden').on('show.bs.modal', () => {
-  setTimeout(() => {
-    $('#tablaLaboratorio').DataTable({
-      language: {
-        deferRender: true,
-        decimal: ',',
-        thousands: '.',
-        lengthMenu: 'Mostrando _MENU_ registros por página',
-        info: 'Mostrando página _PAGE_ de _PAGES_',
-        sProcessing: 'Procesando...',
-        sZeroRecords: 'No se encontraron resultados',
-        sEmptyTable: '¡Sin información a mostrar!',
-        sInfoEmpty: 'Sin registros',
-        sInfoFiltered: '(filtrado de un total de _MAX_ registros)',
-        sInfoPostFix: '',
-        sSearch: 'Buscar',
-        sUrl: '',
-        sLoadingRecords: 'Cargando...',
-        oPaginate: {
-          sFirst: 'Primero',
-          sLast: 'Último',
-          sNext: 'Siguiente',
-          sPrevious: 'Anterior',
-        },
-        oAria: {
-          sSortAscending: ': Activar para ordenar la columna de manera ascendente',
-          sSortDescending: ': Activar para ordenar la columna de manera descendente',
-        },
-      },
-      info: false,
-      paging: false,
-      scrollY: '42vh',
-      scrollCollapse: true,
-      ordering: false,
-      searching: true,
-      pageLength: 5,
-      pagingType: 'full_numbers',
-      Responsive: true,
-      bLengthChange: false,
-      retrieve: true,
-    });
-  }, 160);
-});
-
-$('#tabla-centro-pedido').DataTable({
-  language: {
-    deferRender: true,
-    decimal: ',',
-    thousands: '.',
-    lengthMenu: 'Mostrando _MENU_ registros por página',
-    info: 'Mostrando página _PAGE_ de _PAGES_',
-    sProcessing: 'Procesando...',
-    sZeroRecords: 'No se encontraron resultados',
-    sEmptyTable: '¡Sin información a mostrar!',
-    sInfoEmpty: 'Sin registros',
-    sInfoFiltered: '(filtrado de un total de _MAX_ registros)',
-    sInfoPostFix: '',
-    sSearch: 'Buscar',
-    sUrl: '',
-    sLoadingRecords: 'Cargando...',
-    oPaginate: {
-      sFirst: 'Primero',
-      sLast: 'Último',
-      sNext: 'Siguiente',
-      sPrevious: 'Anterior',
-    },
-    oAria: {
-      sSortAscending: ': Activar para ordenar la columna de manera ascendente',
-      sSortDescending: ': Activar para ordenar la columna de manera descendente',
-    },
-  },
-  info: false,
-  paging: false,
-  scrollY: '42vh',
-  scrollCollapse: true,
-  ordering: false,
-  searching: false,
-  pageLength: 5,
-  pagingType: 'full_numbers',
-  Responsive: true,
-  bLengthChange: false,
-});
-
 const descuentoMaximo = +document.getElementById('descuento-maximo')?.value;
 
 // reinicia modales al cerrarlos
@@ -127,45 +31,6 @@ function setLaboratorio(id, descripcion) {
 
   document.getElementById('eligeLaboratorio').classList.add('d-none');
   document.getElementById('eligeCliente').classList.remove('d-none');
-
-  $('#eligeCliente table').DataTable({
-    language: {
-      deferRender: true,
-      decimal: ',',
-      thousands: '.',
-      lengthMenu: 'Mostrando _MENU_ registros por página',
-      info: 'Mostrando página _PAGE_ de _PAGES_',
-      sProcessing: 'Procesando...',
-      sZeroRecords: 'No se encontraron resultados',
-      sEmptyTable: '¡Sin información a mostrar!',
-      sInfoEmpty: 'Sin registros',
-      sInfoFiltered: '(filtrado de un total de _MAX_ registros)',
-      sInfoPostFix: '',
-      sSearch: 'Buscar',
-      sUrl: '',
-      sLoadingRecords: 'Cargando...',
-      oPaginate: {
-        sFirst: 'Primero',
-        sLast: 'Último',
-        sNext: 'Siguiente',
-        sPrevious: 'Anterior',
-      },
-      oAria: {
-        sSortAscending: ': Activar para ordenar la columna de manera ascendente',
-        sSortDescending: ': Activar para ordenar la columna de manera descendente',
-      },
-    },
-    info: false,
-    paging: false,
-    scrollY: '42vh',
-    scrollCollapse: true,
-    ordering: false,
-    searching: false,
-    pageLength: 5,
-    responsive: true,
-    bLengthChange: false,
-    retrieve: true,
-  });
 }
 
 function SetCliente(id, descripcion) {
@@ -180,7 +45,7 @@ function SetCliente(id, descripcion) {
   document.getElementById('btnCrearOrden').classList.remove('d-none');
 }
 
-// Recibe la llamada de la vista para realizar bÃºsqueda
+// Recibe la llamada de la vista para realizar búsqueda
 function buscaCliente() {
   var valorBusqueda = $('#busquedaCliente').val();
 
@@ -244,7 +109,9 @@ function agregarItem(idOrden, idItem, idCliente) {
         document.getElementById('errorAjaxCall').innerHTML = `
                     <div class="alert alert-danger" role="alert">
                         ${xhr.responseText}
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
                     </div>`;
       }
     },
@@ -392,9 +259,93 @@ function mostrarAlertaDescarga() {
   alerta.setAttribute('role', 'alert');
   alerta.setAttribute('align', 'center');
   alerta.innerHTML = `
-    La descarga con la relaciÃ³n de las facturas iniciarÃ¡ en breve.
-    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>`;
+    La descarga con la relación de las facturas iniciará en breve.
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>`;
 
   const mainEl = document.querySelector('main');
   mainEl.prepend(alerta);
 }
+
+$(window).on('load', function () {
+  $('#imagemodal').modal('show');
+});
+
+$('table').DataTable({
+  language: {
+    deferRender: true,
+    decimal: ',',
+    thousands: '.',
+    lengthMenu: 'Mostrando _MENU_ registros por página',
+    info: 'Mostrando página _PAGE_ de _PAGES_',
+    sProcessing: 'Procesando...',
+    sZeroRecords: 'No se encontraron resultados',
+    sEmptyTable: '¡Sin información a mostrar!',
+    sInfoEmpty: 'Sin registros',
+    sInfoFiltered: '(filtrado de un total de _MAX_ registros)',
+    sInfoPostFix: '',
+    sSearch: 'Buscar',
+    sUrl: '',
+    sLoadingRecords: 'Cargando...',
+    oPaginate: {
+      sFirst: 'Primero',
+      sLast: 'Último',
+      sNext: 'Siguiente',
+      sPrevious: 'Anterior',
+    },
+    oAria: {
+      sSortAscending: ': Activar para ordenar la columna de manera ascendente',
+      sSortDescending: ': Activar para ordenar la columna de manera descendente',
+    },
+  },
+  info: false,
+  paging: false,
+  scrollY: '42vh',
+  scrollCollapse: true,
+  ordering: false,
+  searching: true,
+  pageLength: 5,
+  pagingType: 'full_numbers',
+  Responsive: true,
+  bLengthChange: false,
+});
+
+// Inicializa tooltips
+$(document).ready(function () {
+  $('[data-bs-toggle="tooltip"]').tooltip();
+  $('[data-bs-toggle="tooltip"]').tooltip('disable');
+});
+
+// variable global con filtro
+var filtro = 0;
+
+// agrega pantalla de carga al cargar pedido
+document.getElementById('formCargarPedidoExcel').addEventListener('submit', (e) => {
+  $('#modalCargarPedidoExcel').removeClass('fade');
+  $('#modalCargarPedidoExcel').modal('hide');
+  $('#modalPantallaCarga').modal('show');
+});
+
+// Funcionalidad de check para descuentos
+document.querySelectorAll('.usaDescuento').forEach((check) => {
+  check.addEventListener('change', (e) => {
+    let input = check.nextElementSibling;
+    if (check.checked) {
+      input.removeAttribute('disabled');
+    } else {
+      input.setAttribute('disabled', '');
+    }
+  });
+});
+
+// Formatea descuentos antes de enviarlos al servidor
+document.getElementById('form-descuentos-generales').addEventListener('submit', (e) => {
+  let descuento1 = document.getElementById('descuento-uno');
+  let descuento2 = document.getElementById('descuento-dos');
+
+  descuento1.type = 'text';
+  descuento1.value = descuento1.value.replace('.', ',');
+  descuento2.type = 'text';
+  descuento2.value = descuento2.value.replace('.', ',');
+});

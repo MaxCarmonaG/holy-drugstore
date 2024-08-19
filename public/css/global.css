@@ -94,6 +94,19 @@ a:hover {
   --bs-btn-active-border-color: var(--color-brand-light-s20);
 }
 
+.btn-brand-outline {
+  --bs-btn-font-weight: 600;
+  --bs-btn-color: var(--color-brand-primary);
+  --bs-btn-bg: var(--color-brand-light);
+  --bs-btn-border-color: var(--color-brand-primary);
+  --bs-btn-hover-color: var(--color-brand-light);
+  --bs-btn-hover-bg: var(--color-brand-primary);
+  --bs-btn-hover-border-color: var(--color-brand-primary);
+  --bs-btn-active-color: var(--color-brand-light);
+  --bs-btn-active-bg: var(--color-brand-primary-s20);
+  --bs-btn-active-border-color: var(--color-brand-primary-s20);
+}
+
 .dropdown-menu {
   --bs-dropdown-link-active-bg: var(--color-brand-primary);
 }

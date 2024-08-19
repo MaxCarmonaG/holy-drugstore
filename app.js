@@ -47,6 +47,18 @@ app.get('/listarPrecios', (req, res) => {
   res.sendFile(path.join(__dirname, '/api/content/get-listar-precios.html'));
 });
 
+app.get('/cliente/busquedacliente', (req, res) => {
+  res.sendFile(path.join(__dirname, '/api/content/get-busqueda-cliente.html'));
+});
+
+app.post('/CentroPedidos/CrearOrden', (req, res) => {
+  res.redirect('/centropedidos/crearorden');
+});
+
+app.get('/centropedidos/agregaitem', (req, res) => {
+  res.sendFile(path.join(__dirname, '/api/content/get-agrega-item.html'));
+});
+
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {

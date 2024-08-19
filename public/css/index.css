@@ -1,0 +1,5 @@
+@media (min-width: 992px) {
+  #modalListaPrecios .modal-subtitle {
+    margin-bottom: -60px;
+  }
+}
